@@ -1,0 +1,118 @@
+:root {
+  --bg: #f7f5f2;
+  --text: #26272b;
+  --accent: #3f6b8e;
+  --card-bg: #ffffff;
+  --border: #e2ddd5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.site-header {
+  background: var(--accent);
+  color: #fff;
+  padding: 48px 0 36px;
+  text-align: center;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.site-subtitle {
+  margin: 8px 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+main {
+  padding: 48px 0;
+}
+
+.gallery h2 {
+  margin-bottom: 4px;
+}
+
+.gallery-intro {
+  color: #6b6b6b;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.photo {
+  margin: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #eee;
+}
+
+.photo figcaption {
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Shown when the referenced image file doesn't exist yet */
+.photo.missing img {
+  visibility: hidden;
+  position: relative;
+}
+
+.photo.missing {
+  position: relative;
+}
+
+.photo.missing::before {
+  content: "Add " attr(data-name) " here";
+  position: absolute;
+  inset: 0;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  background: linear-gradient(135deg, #dfe7ee, #eef1f4);
+  color: #8a97a3;
+  font-size: 0.9rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
