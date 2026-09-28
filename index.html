@@ -221,6 +221,32 @@
   }
   .callout p { font-size: 15px; }
 
+  /* ── DIAGRAM FIGURE ── */
+  .diagram-figure {
+    margin: 28px 0;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align: center;
+  }
+  .diagram-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+  }
+  .diagram-figure figcaption {
+    margin-top: 14px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--ink-light);
+    text-align: center;
+  }
+
   /* ── VARIETY CARDS ── */
   .variety-grid {
     display: flex;
@@ -672,6 +698,11 @@
     <div class="section-eyebrow">Understanding Your Plant</div>
     <h2>The Banana Primer: What You're Actually Growing</h2>
     <p>Bananas are one of the most misunderstood plants in the home garden. What looks like a tree is not one. What looks like a trunk is not one. And what produces fruit is not the plant you see above ground — it's the underground corm that does all the real work. Before picking a variety, understanding these fundamentals will save you significant frustration.</p>
+
+    <figure class="diagram-figure">
+      <img src="images/parts-of-banana.webp" alt="Labeled diagram of the parts of a banana plant (variegated type), showing leaves, stalk, bunch, pseudostem, corm, roots, and other anatomy" />
+      <figcaption>Anatomy of a banana plant — leaves, pseudostem, corm, and bunch</figcaption>
+    </figure>
 
     <h3>Not a Tree — A Giant Herb</h3>
     <p>Bananas are the world's largest herbaceous perennials. The "trunk" is a <strong>pseudostem</strong> — a tightly wound cylinder of overlapping leaf sheaths that grows from a fleshy underground storage organ called the <strong>corm</strong> (sometimes called the rhizome). There is no woody tissue. This is why bananas can grow 10–15 feet in a single season, and why a hard freeze, while killing everything above ground, doesn't necessarily kill the plant — the corm, protected underground, can push up entirely new growth in spring.</p>
