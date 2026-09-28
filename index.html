@@ -388,11 +388,14 @@
   }
 
   /* ── VARIETY IMAGES ── */
+  .variety-intro {
+    display: flex;
+    align-items: center;
+  }
   .variety-img-wrap {
-    grid-column: 1 / -1;
     border-radius: 8px;
     overflow: hidden;
-    height: 220px;
+    height: 190px;
     background: var(--parchment-dark);
     display: flex;
     align-items: center;
@@ -400,11 +403,16 @@
     position: relative;
   }
   .variety-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     object-position: center;
     display: block;
+  }
+  @media (max-width: 640px) {
+    .variety-img-wrap { height: 220px; }
   }
   .variety-img-wrap .img-placeholder {
     display: flex;
@@ -824,12 +832,12 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
+          <div class="variety-intro">
+            <p class="variety-desc">The undisputed champion of cold-hardy bananas and the first plant most DMV gardeners should consider. Musa basjoo is not grown for its fruit (which is seedy and inedible) but for its extraordinary resilience and explosive ornamental presence. Originally from the Ryukyu Islands of southern Japan, it was used historically for its strong leaf fibers in textile production — hence the "fiber" name. It was introduced to Western horticulture through Kew Gardens in the 19th century.</p>
+          </div>
+          <div class="variety-img-wrap">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Musa_basjoo_in_Jardin_des_Plantes_de_Toulouse.jpg/700px-Musa_basjoo_in_Jardin_des_Plantes_de_Toulouse.jpg" alt="Musa basjoo — Japanese Fiber Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🌿</span><p>Musa basjoo<br>Japanese Fiber Banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
-          </div>
-          <div class="variety-body-full">
-            <p class="variety-desc">The undisputed champion of cold-hardy bananas and the first plant most DMV gardeners should consider. Musa basjoo is not grown for its fruit (which is seedy and inedible) but for its extraordinary resilience and explosive ornamental presence. Originally from the Ryukyu Islands of southern Japan, it was used historically for its strong leaf fibers in textile production — hence the "fiber" name. It was introduced to Western horticulture through Kew Gardens in the 19th century.</p>
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 5 (to -10°F with mulch)</span></div>
@@ -865,12 +873,12 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
+          <div class="variety-intro">
+            <p class="variety-desc">A compact, flamboyant ornamental banana native to Assam and the eastern Himalayas. The star of this plant is its unique fruit: small, fuzzy, vivid <strong>pink bananas that split open on their own when ripe</strong>, like tiny party favors, revealing dark seeds. The fruit is technically edible but so full of hard black seeds as to be impractical. Grown for the tropical spectacle it creates in a garden — unusual enough that guests always stop and ask about it.</p>
+          </div>
+          <div class="variety-img-wrap">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Musa_velutina_2.jpg/700px-Musa_velutina_2.jpg" alt="Musa velutina — Pink Velvet Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🌸</span><p>Musa velutina<br>Pink Velvet Banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
-          </div>
-          <div class="variety-body-full">
-            <p class="variety-desc">A compact, flamboyant ornamental banana native to Assam and the eastern Himalayas. The star of this plant is its unique fruit: small, fuzzy, vivid <strong>pink bananas that split open on their own when ripe</strong>, like tiny party favors, revealing dark seeds. The fruit is technically edible but so full of hard black seeds as to be impractical. Grown for the tropical spectacle it creates in a garden — unusual enough that guests always stop and ask about it.</p>
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 7b (to ~21°F)</span></div>
@@ -906,12 +914,12 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
+          <div class="variety-intro">
+            <p class="variety-desc">Not a true banana (a distinct but related genus), the Golden Lotus Banana is from the high mountain forests of Yunnan, China — growing at elevations up to 8,000 feet. This gives it extraordinary cold tolerance for a banana relative. It's grown almost entirely for its spectacular bloom: a massive, <strong>golden-yellow artichoke-shaped flower</strong> that persists on the plant for up to eight months. This is one of the most unusual and conversation-worthy plants you can grow in a DMV garden.</p>
+          </div>
+          <div class="variety-img-wrap">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Musella_lasiocarpa2.jpg/700px-Musella_lasiocarpa2.jpg" alt="Musella lasiocarpa — Golden Lotus Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🌼</span><p>Musella lasiocarpa<br>Golden Lotus Banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
-          </div>
-          <div class="variety-body-full">
-            <p class="variety-desc">Not a true banana (a distinct but related genus), the Golden Lotus Banana is from the high mountain forests of Yunnan, China — growing at elevations up to 8,000 feet. This gives it extraordinary cold tolerance for a banana relative. It's grown almost entirely for its spectacular bloom: a massive, <strong>golden-yellow artichoke-shaped flower</strong> that persists on the plant for up to eight months. This is one of the most unusual and conversation-worthy plants you can grow in a DMV garden.</p>
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 7–10</span></div>
@@ -947,12 +955,12 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
+          <div class="variety-intro">
+            <p class="variety-desc">If you want a realistic shot at eating bananas you grew yourself in the DMV, Dwarf Orinoco is your primary candidate. Originating from the Orinoco River Valley of Venezuela, this cultivar has been selected for exceptional cold and wind tolerance. <strong>The Philadelphia Orchard Project</strong> is actively trialing it in a high tunnel as one of their two primary cold-hardy banana experiments. The fruit is thick-skinned with a mild, starchy-sweet flavor — excellent for cooking green, and fully sweet when ripened yellow. It bounces back from frost damage faster than almost any other variety.</p>
+          </div>
+          <div class="variety-img-wrap">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Musa_paradisiaca_fruit_-_botanic_garden.jpg/700px-Musa_paradisiaca_fruit_-_botanic_garden.jpg" alt="Dwarf Orinoco Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍌</span><p>Dwarf Orinoco<br>Bluggoe Banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
-          </div>
-          <div class="variety-body-full">
-            <p class="variety-desc">If you want a realistic shot at eating bananas you grew yourself in the DMV, Dwarf Orinoco is your primary candidate. Originating from the Orinoco River Valley of Venezuela, this cultivar has been selected for exceptional cold and wind tolerance. <strong>The Philadelphia Orchard Project</strong> is actively trialing it in a high tunnel as one of their two primary cold-hardy banana experiments. The fruit is thick-skinned with a mild, starchy-sweet flavor — excellent for cooking green, and fully sweet when ripened yellow. It bounces back from frost damage faster than almost any other variety.</p>
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 7 (to ~22°F)</span></div>
@@ -988,12 +996,12 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
+          <div class="variety-intro">
+            <p class="variety-desc">A beloved dwarf Indian cultivar that has become one of the most recommended edible bananas for zone 7 growing. Originally from Gujarat, India, Raja Puri is prized by home growers worldwide for its combination of compact size (8–10 ft), genuine cold and wind resistance, and outstanding fruit flavor — described as sweet, creamy, and subtly tart. It is also one of the faster-fruiting varieties, potentially flowering in as little as 9 months and producing a harvestable bunch within 18 months of planting under good conditions.</p>
+          </div>
+          <div class="variety-img-wrap">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Banana_2010.jpg/700px-Banana_2010.jpg" alt="Raja Puri Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍌</span><p>Raja Puri<br>Rajapuri Banana — image coming soon<br><small>Replace with photo from justfruitsandexotics.com</small></p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons · Replace with Raja Puri-specific photo</div>
-          </div>
-          <div class="variety-body-full">
-            <p class="variety-desc">A beloved dwarf Indian cultivar that has become one of the most recommended edible bananas for zone 7 growing. Originally from Gujarat, India, Raja Puri is prized by home growers worldwide for its combination of compact size (8–10 ft), genuine cold and wind resistance, and outstanding fruit flavor — described as sweet, creamy, and subtly tart. It is also one of the faster-fruiting varieties, potentially flowering in as little as 9 months and producing a harvestable bunch within 18 months of planting under good conditions.</p>
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 7–11</span></div>
@@ -1029,12 +1037,12 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
+          <div class="variety-intro">
+            <p class="variety-desc">This is the variety you've heard about — the "blue banana that tastes like vanilla." The Blue Java is a Southeast Asian hybrid (ABB genome group) that earned its nickname from the distinctly <strong>silver-blue skin of unripe fruits</strong>, which ripens to a pale, matte yellow. The flavor truly is different: custardy, mellow-sweet, and unmistakably vanilla-adjacent. Freeze ripe slices and blend them and you'll understand why it's branded the "Ice Cream Banana." It's also one of the most wind-resistant bananas, historically planted in windbreaks across Hawaii and the Pacific.</p>
+          </div>
+          <div class="variety-img-wrap">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Blue_Java_Banana.jpg/700px-Blue_Java_Banana.jpg" alt="Blue Java — Ice Cream Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍦</span><p>Blue Java<br>Ice Cream Banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
-          </div>
-          <div class="variety-body-full">
-            <p class="variety-desc">This is the variety you've heard about — the "blue banana that tastes like vanilla." The Blue Java is a Southeast Asian hybrid (ABB genome group) that earned its nickname from the distinctly <strong>silver-blue skin of unripe fruits</strong>, which ripens to a pale, matte yellow. The flavor truly is different: custardy, mellow-sweet, and unmistakably vanilla-adjacent. Freeze ripe slices and blend them and you'll understand why it's branded the "Ice Cream Banana." It's also one of the most wind-resistant bananas, historically planted in windbreaks across Hawaii and the Pacific.</p>
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 8 (to ~20°F)</span></div>
@@ -1069,12 +1077,12 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
+          <div class="variety-intro">
+            <p class="variety-desc">The banana you already know — this is the fruit sold in virtually every American grocery store. The "Dwarf" in the name refers to the pseudostem height (6–9 ft), not the fruit, which is full-sized. Its origin story involves the Duke of Devonshire's gardener Sir Joseph Paxton, who cultivated specimens sent from China at Chatsworth House in the 1830s. It replaced the Gros Michel after Panama Disease (Race 1) devastated commercial crops in the 1950s–60s. Young plants have distinctive maroon-purple blotches on their leaves.</p>
+          </div>
+          <div class="variety-img-wrap">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Cavendish_Banana_DS.jpg/700px-Cavendish_Banana_DS.jpg" alt="Dwarf Cavendish Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍌</span><p>Dwarf Cavendish<br>The familiar grocery banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
-          </div>
-          <div class="variety-body-full">
-            <p class="variety-desc">The banana you already know — this is the fruit sold in virtually every American grocery store. The "Dwarf" in the name refers to the pseudostem height (6–9 ft), not the fruit, which is full-sized. Its origin story involves the Duke of Devonshire's gardener Sir Joseph Paxton, who cultivated specimens sent from China at Chatsworth House in the 1830s. It replaced the Gros Michel after Panama Disease (Race 1) devastated commercial crops in the 1950s–60s. Young plants have distinctive maroon-purple blotches on their leaves.</p>
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 8–10 (tender)</span></div>
@@ -1110,11 +1118,11 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
-            <img src="images/dwarf-namwa.webp" alt="Dwarf Namwa Banana illustrated botanical plate showing the full plant, individual fruit, young bunch formation, pseudostem cross-section, and staminate flower">
-          </div>
-          <div class="variety-body-full">
+          <div class="variety-intro">
             <p class="variety-desc">An underrated gem. Dwarf Namwa (also called Pisang Awak, Thai Banana, or Dwarf Namwah) is a Southeast Asian cultivar beloved across Thailand, Indonesia, and Malaysia. It produces <strong>enormous clusters</strong> of Lady Finger-style bananas with a sweet, creamy flavor with hints of vanilla and a slight tang — noticeably different from Cavendish. The robust pseudostem and excellent wind resistance make it suited to DMV conditions. Wellspring Gardens rates it at zone 7b, making it one of the more cold-tolerant edible options available.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/dwarf-namwa.webp" alt="Dwarf Namwa Banana illustrated botanical plate showing the full plant, individual fruit, young bunch formation, pseudostem cross-section, and staminate flower">
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 7b–11</span></div>
@@ -1149,11 +1157,11 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
-            <img src="images/super-dwarf-cavendish.webp" alt="Super Dwarf Cavendish illustrated botanical plate showing the potted plant, individual fruit, young bunch formation, pseudostem cross-section, and male bud">
-          </div>
-          <div class="variety-body-full">
+          <div class="variety-intro">
             <p class="variety-desc">The best option for true year-round indoor cultivation. At a maximum height of <strong>3–5 feet</strong>, Super Dwarf Cavendish is compact enough for a bright living room, sunroom, or south-facing window bay. It produces genuine, full-flavored Cavendish bananas on a plant that can live its entire life in an 18–25 gallon container. This is the variety Fafard and other horticultural authorities recommend as the top edible banana for indoor growing. It can fruit within a year of planting under good conditions.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/super-dwarf-cavendish.webp" alt="Super Dwarf Cavendish illustrated botanical plate showing the potted plant, individual fruit, young bunch formation, pseudostem cross-section, and male bud">
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Indoor / frost-free only</span></div>
@@ -1188,11 +1196,11 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
-            <img src="images/truly-tiny.webp" alt="'Truly Tiny' Dwarf Banana illustrated botanical plate showing the full plant, fruit size comparison to a Cavendish banana, young bunch formation, pseudostem cross-section, and male bud">
-          </div>
-          <div class="variety-body-full">
+          <div class="variety-intro">
             <p class="variety-desc">The world's smallest edible banana variety, reaching a maximum of <strong>2–3 feet tall</strong>. This is a novelty in the best sense — a fully functional, fruit-producing banana plant you can keep on a countertop or bright windowsill. The fruit is small but genuinely edible with a sweet Cavendish-like flavor. It won't produce large grocery-store bunches, but as a conversation piece and a proof of concept ("I grew that"), it is unbeatable. Marketed under the trade name "Truly Tiny Musa" by several specialty nurseries.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/truly-tiny.webp" alt="'Truly Tiny' Dwarf Banana illustrated botanical plate showing the full plant, fruit size comparison to a Cavendish banana, young bunch formation, pseudostem cross-section, and male bud">
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Indoor only</span></div>
@@ -1227,11 +1235,11 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
-            <img src="images/praying-hands.webp" alt="Praying Hands Banana illustrated botanical plate showing the fused double bunch, individual fruit, fruit cross-section, young bunch formation, and staminate flower structure">
-          </div>
-          <div class="variety-body-full">
+          <div class="variety-intro">
             <p class="variety-desc">One of the most visually distinctive banana varieties in existence. Praying Hands gets its name from a unique genetic trait where <strong>two adjacent "hands" of bananas grow fused together</strong>, with individual fingers pressed flat against each other — resembling hands clasped in prayer. Native to Southeast Asia, the flavor is mild, slightly less sweet than Cavendish, with a distinct <strong>vanilla and honey note</strong>. The unusual appearance makes it a collector's variety and a guaranteed conversation piece at any farmers market or garden party.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/praying-hands.webp" alt="Praying Hands Banana illustrated botanical plate showing the fused double bunch, individual fruit, fruit cross-section, young bunch formation, and staminate flower structure">
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 8–11</span></div>
@@ -1266,12 +1274,12 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
+          <div class="variety-intro">
+            <p class="variety-desc">Visually the most dramatic fruiting banana — the pseudostem, leaf undersides, and fruit are all a deep <strong>burgundy-maroon red</strong>. Widely grown across South Asia, East Africa, and the Caribbean, Red Dacca produces plump, sweet bananas with a flavor richer than Cavendish and a distinct <strong>hint of raspberry and strawberry</strong> in the flesh. The fruit ripens to a reddish-orange (not yellow), and the soft, creamy texture makes it prized for fresh eating and smoothies. In late summer when fully colored up, the pseudostem reads almost burgundy from a distance — nothing else in a garden looks like it.</p>
+          </div>
+          <div class="variety-img-wrap">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Red_banana.jpg/700px-Red_banana.jpg" alt="Red Dacca — Red Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🔴</span><p>Red Dacca<br>Red Banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
-          </div>
-          <div class="variety-body-full">
-            <p class="variety-desc">Visually the most dramatic fruiting banana — the pseudostem, leaf undersides, and fruit are all a deep <strong>burgundy-maroon red</strong>. Widely grown across South Asia, East Africa, and the Caribbean, Red Dacca produces plump, sweet bananas with a flavor richer than Cavendish and a distinct <strong>hint of raspberry and strawberry</strong> in the flesh. The fruit ripens to a reddish-orange (not yellow), and the soft, creamy texture makes it prized for fresh eating and smoothies. In late summer when fully colored up, the pseudostem reads almost burgundy from a distance — nothing else in a garden looks like it.</p>
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 8–11 (tender)</span></div>
@@ -1306,11 +1314,11 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
-            <img src="images/goldfinger.webp" alt="Goldfinger Banana illustrated botanical plate showing the full bunch on a woven basket, natural skin specks, fruit cross-section, young bunch formation, and flower structure">
-          </div>
-          <div class="variety-body-full">
+          <div class="variety-intro">
             <p class="variety-desc">A remarkable modern hybrid developed by the Honduran Foundation for Agricultural Investigation (FHIA) in the 1980s, specifically bred to resist Panama Disease (both Race 1 and TR4), Black Sigatoka, and other major banana diseases. Goldfinger is a cross between Cavendish and Lady Finger types with an AAAB genome, making it a genuine tetraploid. The flavor is genuinely distinctive: <strong>apple-like with a slight tang when underripe</strong>, becoming richer and sweeter at full ripeness. It has gained commercial traction in Australia. It does not brown when cut — a notable practical advantage.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/goldfinger.webp" alt="Goldfinger Banana illustrated botanical plate showing the full bunch on a woven basket, natural skin specks, fruit cross-section, young bunch formation, and flower structure">
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 8–11</span></div>
@@ -1345,11 +1353,11 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
-            <img src="images/gros-michel.webp" alt="Gros Michel 'Big Mike' Banana illustrated botanical plate showing the full bunch on a woven basket, fruit cross-section, young bunch formation, and flower structure">
-          </div>
-          <div class="variety-body-full">
+          <div class="variety-intro">
             <p class="variety-desc">The legendary banana. Before the 1960s, this was the only banana most Westerners ever ate — and many food historians argue it was simply better than the Cavendish that replaced it. Gros Michel has a <strong>richer flavor, creamier texture, thicker skin</strong> (better for shipping), and a stronger, more complex aroma. It's the banana that banana candy, banana Runts, banana Laffy Taffy, and banana ice cream flavors were all modeled on — which is why they taste nothing like modern grocery bananas. Gros Michel is still grown in small quantities in Asia, Africa, and the Caribbean and is increasingly available from specialty nurseries.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/gros-michel.webp" alt="Gros Michel 'Big Mike' Banana illustrated botanical plate showing the full bunch on a woven basket, fruit cross-section, young bunch formation, and flower structure">
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 9–11 (tender)</span></div>
@@ -1385,11 +1393,11 @@
           </div>
         </div>
         <div class="variety-body">
-          <div class="variety-img-wrap variety-body-full">
-            <img src="images/ever-red.webp" alt="Musa sikkimensis 'Ever Red' illustrated botanical plate showing the full plant with striking maroon-red striped foliage">
-          </div>
-          <div class="variety-body-full">
+          <div class="variety-intro">
             <p class="variety-desc">A 2025 introduction that's generating significant excitement among cold-climate banana enthusiasts. Musa sikkimensis 'Ever Red' is a cold-hardy banana from the Sikkim region of the eastern Himalayas, with remarkable hardiness reportedly to <strong>zone 5</strong>. Its distinguishing feature is a spectacular foliage display: <strong>striking striped green leaves with deep maroon-red markings</strong> that intensify in strong light. Like Musa basjoo, it's primarily ornamental in the DMV — the fruit is not suitable for eating — but the foliage display is arguably even more dramatic. Noted by the National Garden Bureau as a "New in 2025" plant.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/ever-red.webp" alt="Musa sikkimensis 'Ever Red' illustrated botanical plate showing the full plant with striking maroon-red striped foliage">
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 5 (exceptional)</span></div>
