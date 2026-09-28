@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growing Bananas in the DMV — A Complete Home Grower's Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Sans+3:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+  :root {
+    --leaf:        #2D5016;
+    --leaf-mid:    #4A7C24;
+    --leaf-light:  #7DB84A;
+    --banana:      #E8C832;
+    --banana-deep: #C9A820;
+    --earth:       #6B4226;
+    --earth-light: #A0673A;
+    --parchment:   #FAF6EE;
+    --parchment-dark: #F0E9D8;
+    --ink:         #1A1A0F;
+    --ink-mid:     #3D3D28;
+    --ink-light:   #6B6B50;
+    --white:       #FFFFFF;
+    --rule:        #D4C9A8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--parchment);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--leaf);
+    color: var(--white);
+    padding: 80px 40px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -80px;
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(232,200,50,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '🍌';
+    position: absolute;
+    bottom: -20px; right: 40px;
+    font-size: 180px;
+    opacity: 0.07;
+    line-height: 1;
+  }
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--banana);
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 58px);
+    font-weight: 900;
+    line-height: 1.1;
+    max-width: 700px;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--banana);
+  }
+  .hero-sub {
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 580px;
+    opacity: 0.88;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .hero-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--banana);
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  /* ── NAV ── */
+  .toc {
+    background: var(--leaf);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .toc-inner {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .toc-inner::-webkit-scrollbar { display: none; }
+  .toc a {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    padding: 14px 16px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .toc a:hover {
+    color: var(--banana);
+    border-bottom-color: var(--banana);
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  section {
+    padding: 60px 0 20px;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--leaf-mid);
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 3.5vw, 36px);
+    font-weight: 700;
+    color: var(--leaf);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--banana);
+  }
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 28px 0 10px;
+  }
+  h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--leaf-mid);
+    margin: 22px 0 8px;
+  }
+  p { margin-bottom: 14px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ── CALLOUT BOXES ── */
+  .callout {
+    background: var(--parchment-dark);
+    border-left: 4px solid var(--banana);
+    border-radius: 0 8px 8px 0;
+    padding: 18px 22px;
+    margin: 24px 0;
+  }
+  .callout.green {
+    border-left-color: var(--leaf-mid);
+    background: #EFF6E6;
+  }
+  .callout.earth {
+    border-left-color: var(--earth);
+    background: #F5EDE5;
+  }
+  .callout-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 8px;
+  }
+  .callout p { font-size: 15px; }
+
+  /* ── DIAGRAM FIGURE ── */
+  .diagram-figure {
+    margin: 28px 0;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align: center;
+  }
+  .diagram-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+  }
+  .diagram-figure figcaption {
+    margin-top: 14px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--ink-light);
+    text-align: center;
+  }
+
+  /* ── VARIETY CARDS ── */
+  .variety-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 30px;
+  }
+  .variety-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .variety-header {
+    background: var(--leaf);
+    color: var(--white);
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .variety-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.12);
+    line-height: 1;
+    position: absolute;
+    right: 24px;
+    top: 10px;
+  }
+  .variety-header-left { position: relative; }
+  .variety-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .variety-latin {
+    font-style: italic;
+    font-size: 13px;
+    opacity: 0.75;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  .variety-badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .badge {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-weight: 700;
+  }
+  .badge-outdoor  { background: rgba(125,184,74,0.25); color: #90CF50; }
+  .badge-indoor   { background: rgba(232,200,50,0.25); color: var(--banana); }
+  .badge-both     { background: rgba(255,255,255,0.15); color: var(--white); }
+  .badge-edible   { background: rgba(201,168,32,0.25); color: #E8C832; }
+  .badge-ornament { background: rgba(160,103,58,0.25); color: #D4916B; }
+  .badge-cold     { background: rgba(100,180,255,0.2); color: #90CCF5; }
+
+  .variety-body {
+    padding: 22px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 32px;
+  }
+  @media (max-width: 640px) {
+    .variety-body { grid-template-columns: 1fr; }
+  }
+  .variety-body-full {
+    grid-column: 1 / -1;
+  }
+  .variety-specs {
+    background: var(--parchment);
+    border-radius: 8px;
+    padding: 14px 18px;
+  }
+  .spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 14px;
+    gap: 12px;
+  }
+  .spec-row:last-child { border-bottom: none; }
+  .spec-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .spec-val {
+    font-weight: 600;
+    text-align: right;
+    color: var(--ink);
+  }
+  .difficulty-bar {
+    display: flex;
+    gap: 3px;
+    justify-content: flex-end;
+  }
+  .diff-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--rule);
+  }
+  .diff-dot.filled { background: var(--leaf-mid); }
+  .variety-desc { font-size: 15px; line-height: 1.7; }
+  .variety-highlight {
+    background: linear-gradient(135deg, #EFF6E6, #F5EDE5);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .variety-highlight strong {
+    display: block;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--leaf-mid);
+    margin-bottom: 6px;
+  }
+
+  /* ── VARIETY IMAGES ── */
+  .variety-intro {
+    display: flex;
+    align-items: center;
+  }
+  .variety-img-wrap {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 190px;
+    background: var(--parchment-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .variety-img-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+  }
+  @media (max-width: 640px) {
+    .variety-img-wrap { height: 220px; }
+  }
+  .variety-img-wrap .img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--ink-light);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+  }
+  .variety-img-wrap .img-placeholder span { font-size: 36px; }
+  .variety-img-credit {
+    position: absolute;
+    bottom: 6px;
+    right: 8px;
+    background: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0.75);
+    font-size: 9px;
+    font-family: 'Space Mono', monospace;
+    padding: 2px 6px;
+    border-radius: 3px;
+    pointer-events: none;
+  }
+
+  /* ── STRATEGY BLOCKS ── */
+  .strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+  }
+  @media (max-width: 680px) {
+    .strategy-grid { grid-template-columns: 1fr; }
+  }
+  .strategy-card {
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .strategy-card-head {
+    padding: 14px 16px;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .strategy-card-head.s1 { background: var(--leaf); }
+  .strategy-card-head.s2 { background: var(--earth-light); }
+  .strategy-card-head.s3 { background: var(--ink-mid); }
+  .strategy-card-body {
+    padding: 14px 16px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  /* ── QUICK REF TABLE ── */
+  .ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 24px;
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .ref-table th {
+    background: var(--leaf);
+    color: var(--white);
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 12px 14px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  .ref-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: middle;
+  }
+  .ref-table tr:last-child td { border-bottom: none; }
+  .ref-table tr:nth-child(even) td { background: var(--parchment); }
+  .zone-pill {
+    display: inline-block;
+    background: var(--leaf-light);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .zone-pill.warm { background: var(--earth-light); }
+  .zone-pill.hot { background: #c0392b; }
+
+  /* ── LISTS ── */
+  ul.leaf-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+  }
+  ul.leaf-list li {
+    padding: 5px 0 5px 22px;
+    position: relative;
+    font-size: 15px;
+    border-bottom: 1px solid var(--rule);
+  }
+  ul.leaf-list li:last-child { border-bottom: none; }
+  ul.leaf-list li::before {
+    content: '🌿';
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    top: 7px;
+  }
+
+  ol.steps {
+    list-style: none;
+    padding: 0;
+    counter-reset: step-counter;
+    margin: 16px 0;
+  }
+  ol.steps li {
+    counter-increment: step-counter;
+    padding: 10px 0 10px 44px;
+    position: relative;
+    border-bottom: 1px solid var(--rule);
+    font-size: 15px;
+  }
+  ol.steps li:last-child { border-bottom: none; }
+  ol.steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 28px; height: 28px;
+    background: var(--leaf);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--leaf);
+    color: rgba(255,255,255,0.6);
+    padding: 36px 40px;
+    font-size: 13px;
+    margin-top: 60px;
+    text-align: center;
+  }
+  footer strong { color: var(--banana); }
+
+  /* ── MISC ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 20px;
+  }
+  @media (max-width: 640px) {
+    .two-col { grid-template-columns: 1fr; }
+    .hero { padding: 50px 24px 40px; }
+    .toc { padding: 0 16px; }
+    .container { padding: 0 20px; }
+  }
+  .divider {
+    height: 1px;
+    background: var(--rule);
+    margin: 40px 0 0;
+  }
+  .fun-fact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+  }
+  @media (max-width: 600px) { .fun-fact-grid { grid-template-columns: 1fr; } }
+  .fun-fact {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .fun-fact-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .fun-fact p { font-size: 14px; }
+  .fun-fact strong { color: var(--leaf); }
+
+  .sourcing-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+  }
+  .sourcing-card h4 { margin-top: 0; }
+  .sourcing-card p { font-size: 14px; margin-bottom: 6px; }
+  .sourcing-card p:last-child { margin-bottom: 0; }
+
+  .pest-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 1fr;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 14px;
+    align-items: start;
+  }
+  .pest-row:last-child { border-bottom: none; }
+  .pest-name { font-weight: 700; color: var(--earth); }
+  .pest-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    display: block;
+    margin-bottom: 3px;
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Home Grower's Field Guide · DMV Edition</div>
+  <h1>Growing <em>Bananas</em> in the Mid-Atlantic</h1>
+  <p class="hero-sub">A comprehensive guide to selecting, growing, and fruiting bananas across Washington DC, Maryland, and Virginia — from cold-hardy garden specimens to productive indoor dwarf varieties.</p>
+  <div class="hero-meta">
+    <div class="hero-stat">
+      <span class="hero-stat-num">15</span>
+      <span class="hero-stat-label">Varieties Profiled</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">6b–7b</span>
+      <span class="hero-stat-label">DMV Hardiness Zone</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">3</span>
+      <span class="hero-stat-label">Growing Strategies</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">Yes</span>
+      <span class="hero-stat-label">Fruiting Is Possible</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="index.html">← Home</a>
+    <a href="#primer">Primer</a>
+    <a href="#zones">DMV Zones</a>
+    <a href="#strategies">Strategies</a>
+    <a href="#varieties">15 Varieties</a>
+    <a href="#care">Care Guide</a>
+    <a href="#overwinter">Overwintering</a>
+    <a href="#indoor">Indoor Growing</a>
+    <a href="#pests">Pests & Disease</a>
+    <a href="#harvest">Harvest</a>
+    <a href="#sourcing">Sourcing</a>
+    <a href="#facts">Fun Facts</a>
+    <a href="#quickref">Quick Ref</a>
+    <a href="#starterkit">Starter Kit</a>
+    <a href="#buyguide">Buy Online</a>
+  </div>
+</nav>
+
+<!-- PRIMER -->
+<section id="primer">
+  <div class="container">
+    <div class="section-eyebrow">Understanding Your Plant</div>
+    <h2>The Banana Primer: What You're Actually Growing</h2>
+    <p>Bananas are one of the most misunderstood plants in the home garden. What looks like a tree is not one. What looks like a trunk is not one. And what produces fruit is not the plant you see above ground — it's the underground corm that does all the real work. Before picking a variety, understanding these fundamentals will save you significant frustration.</p>
+
+    <figure class="diagram-figure">
+      <img src="images/parts-of-banana.webp" alt="Labeled diagram of the parts of a banana plant (variegated type), showing leaves, stalk, bunch, pseudostem, corm, roots, and other anatomy" />
+      <figcaption>Anatomy of a banana plant — leaves, pseudostem, corm, and bunch</figcaption>
+    </figure>
+
+    <h3>Not a Tree — A Giant Herb</h3>
+    <p>Bananas are the world's largest herbaceous perennials. The "trunk" is a <strong>pseudostem</strong> — a tightly wound cylinder of overlapping leaf sheaths that grows from a fleshy underground storage organ called the <strong>corm</strong> (sometimes called the rhizome). There is no woody tissue. This is why bananas can grow 10–15 feet in a single season, and why a hard freeze, while killing everything above ground, doesn't necessarily kill the plant — the corm, protected underground, can push up entirely new growth in spring.</p>
+
+    <h3>How Bananas Reproduce & Fruit</h3>
+    <p>Each pseudostem fruits exactly once. After producing a flower stalk (the "inflorescence") and developing a bunch of bananas, that stem dies. The plant survives and continues through <strong>pups</strong> — offshoots that emerge from the corm throughout the growing season. Managing pups is central to banana cultivation: you keep 1–2 successors growing while the main stem fruits, creating a perpetual clonal colony.</p>
+    <p>The flower emerges from the center of the pseudostem after the plant has grown enough leaves (typically 12–18 leaves for most varieties). The hands of bananas develop from the female flowers along the stalk; the male flower bud hangs at the tip. From flower emergence to harvest takes an additional 3–5 months depending on the variety and temperature.</p>
+
+    <h3>The Critical Fruiting Requirement</h3>
+    <div class="callout">
+      <div class="callout-title">⚠️ Key Expectation</div>
+      <p>Most edible banana varieties require a <strong>continuous frost-free period of 9–18 months</strong> from planting to produce fruit. In the DMV (zones 6b–7b), this is the central challenge. Without a protected microclimate, a container strategy, or a cold-hardy variety, fruiting is difficult but not impossible — especially in the warmer parts of the region (Southern Maryland, DC proper, Northern Virginia).</p>
+    </div>
+
+    <h3>The Great Banana Collapse: Panama Disease & the Gros Michel</h3>
+    <p>If you've ever wondered why banana candy tastes nothing like the bananas you buy in a store — this is why. Before the 1960s, the world ate the <strong>Gros Michel</strong> ("Big Mike") — a richer, creamier, more aromatic banana that many food historians say was genuinely superior. It's the variety that banana-flavored candy, ice cream, and Runts were modeled on.</p>
+    <p>The Gros Michel was wiped out commercially by <strong>Panama disease</strong> (Fusarium oxysporum, Race 1), a soil-borne fungal pathogen that spread across monoculture plantations worldwide. The industry pivoted to the <strong>Cavendish</strong>, which was immune to Race 1 — but is now itself threatened by a new strain, <strong>Tropical Race 4 (TR4)</strong>, currently spreading across Asia and Africa. For home growers, planting diverse varieties is both a pleasure and, in a small way, a contribution to genetic conservation.</p>
+  </div>
+</section>
+
+<!-- ZONES -->
+<section id="zones">
+  <div class="container">
+    <div class="section-eyebrow">Your Growing Environment</div>
+    <h2>The DMV Climate & What It Means for Bananas</h2>
+    <p>The Washington DC / Maryland / Virginia region spans USDA hardiness zones <strong>6b through 7b</strong>, though urban heat islands in DC proper, Baltimore City, and dense Northern Virginia suburbs can push microclimates toward zone 8. Understanding your specific sub-zone is the first step to realistic planning.</p>
+
+    <div class="two-col">
+      <div>
+        <h4>Typical DMV Zones</h4>
+        <ul class="leaf-list">
+          <li><strong>DC proper & Alexandria:</strong> 7a–7b (urban heat island advantage)</li>
+          <li><strong>Northern Virginia suburbs:</strong> 6b–7a</li>
+          <li><strong>Outer NoVA (Loudoun, Fauquier):</strong> 6a–6b</li>
+          <li><strong>Baltimore City:</strong> 7a–7b</li>
+          <li><strong>Montgomery & PG Counties:</strong> 7a</li>
+          <li><strong>Southern Maryland:</strong> 7a–7b</li>
+          <li><strong>Western MD (Frederick, Hagerstown):</strong> 6b</li>
+          <li><strong>Eastern Shore:</strong> 7a–7b</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Key Climate Facts for Banana Growing</h4>
+        <ul class="leaf-list">
+          <li>Average last frost: <strong>mid-March to mid-April</strong> (later in western zones)</li>
+          <li>Average first fall frost: <strong>late October to mid-November</strong></li>
+          <li>Frost-free growing window: <strong>185–220 days</strong> in most of the DMV</li>
+          <li>Summers are hot and humid — bananas love this</li>
+          <li>Urban microclimates can add 1–2 full zones of effective hardiness</li>
+          <li>South-facing walls + good drainage = significant advantage</li>
+          <li>The University of Maryland Extension confirms in-ground overwintering works in Baltimore City, the Eastern Shore, and Southern MD</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout green">
+      <div class="callout-title">💡 Microclimate Tip</div>
+      <p>A banana planted against a south- or west-facing brick or stone wall can behave like it's a full zone warmer. Walls absorb heat during the day and radiate it at night. This single siting choice is often the difference between a plant that dies back to the corm and one that partially retains its pseudostem through winter — saving months of regrowth time and making fruiting far more achievable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGIES -->
+<section id="strategies">
+  <div class="container">
+    <div class="section-eyebrow">Planning Your Approach</div>
+    <h2>Three Growing Strategies for the DMV</h2>
+    <p>There is no single right way to grow bananas in the Mid-Atlantic. Your strategy should match your space, ambitions, and how much management you want to do. Most DMV growers end up using two or even all three approaches at once.</p>
+
+    <div class="strategy-grid">
+      <div class="strategy-card">
+        <div class="strategy-card-head s1">🌿 Strategy 1</div>
+        <div class="strategy-card-body">
+          <strong>Ground + Mulch (Ornamental/Hardy)</strong>
+          <p style="margin-top:10px; font-size:14px;">Plant cold-hardy varieties (Musa basjoo, Musa velutina, Musella lasiocarpa) directly in the ground. In fall, cut back and mulch heavily (12–18 inches of leaves/straw in a wire cage). These plants die to the corm, re-emerge in April/May, and grow dramatically through summer. Fruiting is secondary — the goal is tropical landscaping drama.</p>
+          <p style="font-size:13px; color: var(--ink-light); margin-top:8px;"><strong>Best for:</strong> Guaranteed perennial return, low ongoing effort after establishment, maximum foliage drama, zones 6b+.</p>
+        </div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-card-head s2">🪴 Strategy 2</div>
+        <div class="strategy-card-body">
+          <strong>Container + Overwinter</strong>
+          <p style="margin-top:10px; font-size:14px;">Grow edible dwarf varieties (Dwarf Cavendish, Raja Puri, Blue Java, Dwarf Namwa) in large containers (15–30 gallon). Live outdoors May–October, then move to a garage, basement, or bright indoor space before first frost. Water sparingly in dormancy. The plant retains its corm and resumes growth in spring.</p>
+          <p style="font-size:13px; color: var(--ink-light); margin-top:8px;"><strong>Best for:</strong> Edible fruit production, anyone with outdoor space + interior storage, flexible placement, all DMV zones.</p>
+        </div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-card-head s3">🏠 Strategy 3</div>
+        <div class="strategy-card-body">
+          <strong>True Indoor Houseplant</strong>
+          <p style="margin-top:10px; font-size:14px;">Grow Super Dwarf Cavendish, Truly Tiny, or Musa basjoo year-round indoors in a bright, south-facing window or under full-spectrum LED grow lights. These stay manageable (2–6 ft), can flower and occasionally fruit indoors, and serve as dramatic tropical houseplants. High humidity (50%+) is key.</p>
+          <p style="font-size:13px; color: var(--ink-light); margin-top:8px;"><strong>Best for:</strong> No outdoor space, year-round tropical aesthetic, smaller scale, high-light rooms or grow light setups.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VARIETIES -->
+<section id="varieties">
+  <div class="container">
+    <div class="section-eyebrow">The Core of This Guide</div>
+    <h2>15 Recommended Varieties for the DMV</h2>
+    <p>These varieties are ranked roughly from most cold-hardy / easiest for beginners to more tropical / requiring more management. Each profile covers origin, flavor, growing specs, DMV suitability, and what makes it special.</p>
+
+    <div class="variety-grid">
+
+      <!-- 1 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Musa basjoo — Japanese Fiber Banana</div>
+            <div class="variety-latin">Musa basjoo · AAB Group</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-outdoor">Outdoor</span>
+            <span class="badge badge-cold">Hardiest</span>
+            <span class="badge badge-ornament">Ornamental</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">The undisputed champion of cold-hardy bananas and the first plant most DMV gardeners should consider. Musa basjoo is not grown for its fruit (which is seedy and inedible) but for its extraordinary resilience and explosive ornamental presence. Originally from the Ryukyu Islands of southern Japan, it was used historically for its strong leaf fibers in textile production — hence the "fiber" name. It was introduced to Western horticulture through Kew Gardens in the 19th century.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Musa_basjoo_in_Jardin_des_Plantes_de_Toulouse.jpg/700px-Musa_basjoo_in_Jardin_des_Plantes_de_Toulouse.jpg" alt="Musa basjoo — Japanese Fiber Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🌿</span><p>Musa basjoo<br>Japanese Fiber Banana</p></div>'">
+            <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 5 (to -10°F with mulch)</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">10–15 ft per season</span></div>
+            <div class="spec-row"><span class="spec-label">Fruit</span><span class="spec-val">Inedible (seedy)</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Ground + mulch</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Ryukyu Islands, Japan</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why It's Perfect for DMV</strong>
+            A mature basjoo corm, mulched with 12–18 inches of dry leaves in a wire cage, will re-emerge every spring regardless of DMV winters. Gardeners in Fairfax County have grown it successfully for decades. In its first season it reaches 6–8 ft; by year 3–5 it can hit 14 ft. Clumps spread year over year for an increasingly dramatic tropical screen. Plant in full sun against a south-facing wall for maximum speed.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> Musa basjoo's fiber has been woven into fabric called "bashōfu" in Okinawa for over 500 years — it was used for royal garments. The plant is considered a designated traditional craft of Japan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Musa velutina — Pink Velvet Banana</div>
+            <div class="variety-latin">Musa velutina · Species</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-outdoor">Outdoor</span>
+            <span class="badge badge-cold">Zone 7b</span>
+            <span class="badge badge-ornament">Ornamental</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">A compact, flamboyant ornamental banana native to Assam and the eastern Himalayas. The star of this plant is its unique fruit: small, fuzzy, vivid <strong>pink bananas that split open on their own when ripe</strong>, like tiny party favors, revealing dark seeds. The fruit is technically edible but so full of hard black seeds as to be impractical. Grown for the tropical spectacle it creates in a garden — unusual enough that guests always stop and ask about it.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Musa_velutina_2.jpg/700px-Musa_velutina_2.jpg" alt="Musa velutina — Pink Velvet Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🌸</span><p>Musa velutina<br>Pink Velvet Banana</p></div>'">
+            <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 7b (to ~21°F)</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">5–8 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Fruit</span><span class="spec-val">Ornamental / self-splitting</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Ground or container</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Assam / East Himalayas, India</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why It's Perfect for DMV</strong>
+            Plant Delights Nursery (NC) — which trials thousands of plants in zone 7b — reports Musa velutina is "fully winter-hardy in zone 7b as long as grown in full sun." After establishment, a mulch cage is sufficient. It blooms in late summer (9–12 months from planting) and sets its photogenic pink clusters reliably. Compact size makes it a great front-of-border tropical accent, unlike basjoo which requires more space.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> The self-peeling fruit is an evolutionary adaptation — in the wild, the fruit splits to expose seeds for bird dispersal. This is unusual among bananas, where fruit typically must be peeled by mammals.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Musella lasiocarpa — Golden Lotus Banana</div>
+            <div class="variety-latin">Musella lasiocarpa · Musella genus (not true Musa)</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-outdoor">Outdoor</span>
+            <span class="badge badge-cold">Zone 7</span>
+            <span class="badge badge-ornament">Ornamental</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">Not a true banana (a distinct but related genus), the Golden Lotus Banana is from the high mountain forests of Yunnan, China — growing at elevations up to 8,000 feet. This gives it extraordinary cold tolerance for a banana relative. It's grown almost entirely for its spectacular bloom: a massive, <strong>golden-yellow artichoke-shaped flower</strong> that persists on the plant for up to eight months. This is one of the most unusual and conversation-worthy plants you can grow in a DMV garden.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Musella_lasiocarpa2.jpg/700px-Musella_lasiocarpa2.jpg" alt="Musella lasiocarpa — Golden Lotus Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🌼</span><p>Musella lasiocarpa<br>Golden Lotus Banana</p></div>'">
+            <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 7–10</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">3–6 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Fruit</span><span class="spec-val">Tiny, inedible (seeds)</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Ground or container</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Yunnan Province, China</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why It's Perfect for DMV</strong>
+            Its mountain origins mean it handles cold that would devastate tropical bananas. It multiplies quickly via pups, so one plant becomes a dense ornamental clump quickly. The compact 3–6 ft height means it works even in smaller gardens or large patio containers. The persistent golden flower is unlike anything else you'll grow — and blooms typically in its second year, then annually afterward.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> Musella lasiocarpa is the only species in its genus — it has no close relatives and represents an ancient evolutionary branch of the banana family. In Chinese traditional medicine, the flower was used to treat stomach disorders.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Dwarf Orinoco — Bluggoe Banana</div>
+            <div class="variety-latin">Musa × paradisiaca 'Orinoco' · ABB Group</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-both">Both</span>
+            <span class="badge badge-edible">Edible</span>
+            <span class="badge badge-cold">Zone 7</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">If you want a realistic shot at eating bananas you grew yourself in the DMV, Dwarf Orinoco is your primary candidate. Originating from the Orinoco River Valley of Venezuela, this cultivar has been selected for exceptional cold and wind tolerance. <strong>The Philadelphia Orchard Project</strong> is actively trialing it in a high tunnel as one of their two primary cold-hardy banana experiments. The fruit is thick-skinned with a mild, starchy-sweet flavor — excellent for cooking green, and fully sweet when ripened yellow. It bounces back from frost damage faster than almost any other variety.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Musa_paradisiaca_fruit_-_botanic_garden.jpg/700px-Musa_paradisiaca_fruit_-_botanic_garden.jpg" alt="Dwarf Orinoco Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍌</span><p>Dwarf Orinoco<br>Bluggoe Banana</p></div>'">
+            <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 7 (to ~22°F)</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">6–8 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Mild, starchy-sweet</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Ground + mulch or container</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Orinoco River Valley, Venezuela</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why It's Perfect for DMV</strong>
+            The first recommendation for zone 7 growers who want edible fruit. A pup started in late May or early June can grow large enough to overwinter successfully and flower the following summer. In a protected zone 7 spot (against a south-facing wall, in a warm pocket), fruiting is achievable. Can also be grown in a container and moved indoors for guaranteed winter survival.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> The Orinoco is one of the oldest banana cultivars in continuous cultivation in the Americas. Spanish missionaries brought it to the Caribbean in the early 1500s, where it became a food staple long before Cavendish arrived. It also goes by the names "Horse Banana" and "Burro Banana" in different regions.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Raja Puri — Rajapuri</div>
+            <div class="variety-latin">Musa acuminata 'Rajapuri' · AAB Group</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-both">Both</span>
+            <span class="badge badge-edible">Edible</span>
+            <span class="badge badge-cold">Zone 7</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">A beloved dwarf Indian cultivar that has become one of the most recommended edible bananas for zone 7 growing. Originally from Gujarat, India, Raja Puri is prized by home growers worldwide for its combination of compact size (8–10 ft), genuine cold and wind resistance, and outstanding fruit flavor — described as sweet, creamy, and subtly tart. It is also one of the faster-fruiting varieties, potentially flowering in as little as 9 months and producing a harvestable bunch within 18 months of planting under good conditions.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Banana_2010.jpg/700px-Banana_2010.jpg" alt="Raja Puri Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍌</span><p>Raja Puri<br>Rajapuri Banana — image coming soon<br><small>Replace with photo from justfruitsandexotics.com</small></p></div>'">
+            <div class="variety-img-credit">© Wikimedia Commons · Replace with Raja Puri-specific photo</div>
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 7–11</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">8–10 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Sweet, creamy, mildly tart</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container preferred</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Gujarat, India</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why It's Perfect for DMV</strong>
+            The Philadelphia Orchard Project planted Raja Puri in their main orchard as one of two primary trials. In the warmer end of zone 7 (DC, Southern MD, Eastern Shore), with a container strategy, Raja Puri is among the most realistic candidates for edible production. Fruit averages 5–6 inches — full-sized, genuine dessert bananas. Its manageable height also makes it easier to protect with a frost cloth or bring indoors as needed.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> Raja Puri translates roughly to "king's town" in Sanskrit — it was historically considered a premium cultivar reserved for markets in major Indian cities. It remains one of India's most commercially important banana varieties today, largely unknown to Western consumers.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Blue Java — Ice Cream Banana</div>
+            <div class="variety-latin">Musa acuminata × balbisiana 'Blue Java' · ABB Group</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-both">Both</span>
+            <span class="badge badge-edible">Edible</span>
+            <span class="badge badge-cold">Zone 8+</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">This is the variety you've heard about — the "blue banana that tastes like vanilla." The Blue Java is a Southeast Asian hybrid (ABB genome group) that earned its nickname from the distinctly <strong>silver-blue skin of unripe fruits</strong>, which ripens to a pale, matte yellow. The flavor truly is different: custardy, mellow-sweet, and unmistakably vanilla-adjacent. Freeze ripe slices and blend them and you'll understand why it's branded the "Ice Cream Banana." It's also one of the most wind-resistant bananas, historically planted in windbreaks across Hawaii and the Pacific.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Blue_Java_Banana.jpg/700px-Blue_Java_Banana.jpg" alt="Blue Java — Ice Cream Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍦</span><p>Blue Java<br>Ice Cream Banana</p></div>'">
+            <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 8 (to ~20°F)</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">10–15 ft outdoors; 6–10 ft container</span></div>
+            <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Custardy, vanilla-like, creamy</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container (best for DMV)</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Southeast Asia / Pacific</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why It's Perfect for DMV</strong>
+            Blue Java is the most-requested variety among DMV banana enthusiasts for good reason — the flavor is genuinely extraordinary. In a container (25–30 gallon), overwintered in a bright garage or basement, this is an achievable fruiting plant for a patient DMV grower. It's triploid (seedless), self-pollinating, and first fruit typically takes 2–3 years. It also thrives indoors near a south-facing window with supplemental grow lights.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> The "blue" color is not pigment in the traditional sense — it comes from a natural wax bloom on the fruit's surface that scatters blue light, similar to the phenomenon that makes blueberries blue and some butterfly wings iridescent. As the fruit ripens and the wax breaks down, the blue disappears. Also note: some nurseries mislabel Namwa as Blue Java — if your "Blue Java" fruit is smaller and more numerous, you likely have Namwa (which is also delicious, but different).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Dwarf Cavendish</div>
+            <div class="variety-latin">Musa acuminata 'Dwarf Cavendish' · AAA Group</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-both">Both</span>
+            <span class="badge badge-edible">Edible</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">The banana you already know — this is the fruit sold in virtually every American grocery store. The "Dwarf" in the name refers to the pseudostem height (6–9 ft), not the fruit, which is full-sized. Its origin story involves the Duke of Devonshire's gardener Sir Joseph Paxton, who cultivated specimens sent from China at Chatsworth House in the 1830s. It replaced the Gros Michel after Panama Disease (Race 1) devastated commercial crops in the 1950s–60s. Young plants have distinctive maroon-purple blotches on their leaves.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Cavendish_Banana_DS.jpg/700px-Cavendish_Banana_DS.jpg" alt="Dwarf Cavendish Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍌</span><p>Dwarf Cavendish<br>The familiar grocery banana</p></div>'">
+            <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 8–10 (tender)</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">6–9 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Classic banana flavor</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container + overwinter</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">China / Canary Islands</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why Consider It for DMV</strong>
+            The familiarity factor is real — you know exactly what you're getting. In a 25-gallon container, overwintered in a bright space, Dwarf Cavendish is one of the more forgiving container banana subjects. Fruits in 15–24 months under good conditions. The main caveat: it is susceptible to Tropical Race 4 (TR4) fungal disease, though this is not yet established in DMV soils. Keep it in containers to reduce soil disease risk.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> Dwarf Cavendish was originally considered inferior to the Gros Michel and was grown mainly in botanical gardens and private estates. The banana industry adopted it out of necessity, not preference. Most banana connoisseurs agree the Gros Michel was genuinely better-tasting.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Dwarf Namwa — Pisang Awak</div>
+            <div class="variety-latin">Musa × 'Namwa' · ABB Group (Pisang Awak subgroup)</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-both">Both</span>
+            <span class="badge badge-edible">Edible</span>
+            <span class="badge badge-cold">Zone 7b</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">An underrated gem. Dwarf Namwa (also called Pisang Awak, Thai Banana, or Dwarf Namwah) is a Southeast Asian cultivar beloved across Thailand, Indonesia, and Malaysia. It produces <strong>enormous clusters</strong> of Lady Finger-style bananas with a sweet, creamy flavor with hints of vanilla and a slight tang — noticeably different from Cavendish. The robust pseudostem and excellent wind resistance make it suited to DMV conditions. Wellspring Gardens rates it at zone 7b, making it one of the more cold-tolerant edible options available.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/dwarf-namwa.webp" alt="Dwarf Namwa Banana illustrated botanical plate showing the full plant, individual fruit, young bunch formation, pseudostem cross-section, and staminate flower">
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 7b–11</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">6–10 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Sweet-creamy, vanilla-tang, hints of pineapple/mango</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container or in-ground (warm zones)</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Southeast Asia (Thailand/Indonesia)</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why It's Perfect for DMV</strong>
+            One of the best-kept secrets for productive DMV banana growing. Larger bunches than Blue Java or Dwarf Cavendish. The flavor complexity — that hint of vanilla and tropical fruit — makes it a standout for fresh eating. Excellent for green banana cooking too (it's used as a cooking banana across Southeast Asia). Container overwintering makes it entirely achievable in all DMV zones.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> Pisang Awak is one of the most widely grown backyard bananas in the world — just not in North America, where it's virtually unknown in supermarkets. In Thailand, it is traditionally fermented and dried into banana chips that are a national snack staple. "Pisang" is the Malay word for banana.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Super Dwarf Cavendish</div>
+            <div class="variety-latin">Musa acuminata 'Super Dwarf Cavendish' · AAA Group</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-indoor">Indoor</span>
+            <span class="badge badge-edible">Edible</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">The best option for true year-round indoor cultivation. At a maximum height of <strong>3–5 feet</strong>, Super Dwarf Cavendish is compact enough for a bright living room, sunroom, or south-facing window bay. It produces genuine, full-flavored Cavendish bananas on a plant that can live its entire life in an 18–25 gallon container. This is the variety Fafard and other horticultural authorities recommend as the top edible banana for indoor growing. It can fruit within a year of planting under good conditions.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/super-dwarf-cavendish.webp" alt="Super Dwarf Cavendish illustrated botanical plate showing the potted plant, individual fruit, young bunch formation, pseudostem cross-section, and male bud">
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Indoor / frost-free only</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">3–5 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Classic Cavendish banana</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Indoor houseplant</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Selection of Cavendish group</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why It's Perfect for DMV</strong>
+            No outdoor space required. A south-facing window (or east/west with supplemental LED grow lights) is all it needs. The compact size means it won't outgrow your living room. An excellent choice for apartment dwellers or anyone who wants a productive tropical houseplant. Humidifier nearby or regular misting significantly improves health and fruiting prospects.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> NASA's Clean Air Study found banana plants are among the most effective houseplants for removing formaldehyde and other VOCs from indoor air — a pleasant side benefit for the indoor grower. The large leaf surface area is key to this air-filtering effect.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Truly Tiny Banana</div>
+            <div class="variety-latin">Musa acuminata 'Truly Tiny' · AAA Group</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-indoor">Indoor</span>
+            <span class="badge badge-edible">Edible</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">The world's smallest edible banana variety, reaching a maximum of <strong>2–3 feet tall</strong>. This is a novelty in the best sense — a fully functional, fruit-producing banana plant you can keep on a countertop or bright windowsill. The fruit is small but genuinely edible with a sweet Cavendish-like flavor. It won't produce large grocery-store bunches, but as a conversation piece and a proof of concept ("I grew that"), it is unbeatable. Marketed under the trade name "Truly Tiny Musa" by several specialty nurseries.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/truly-tiny.webp" alt="'Truly Tiny' Dwarf Banana illustrated botanical plate showing the full plant, fruit size comparison to a Cavendish banana, young bunch formation, pseudostem cross-section, and male bud">
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Indoor only</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">2–3 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Sweet, Cavendish-type</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Houseplant</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Cavendish subgroup selection</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why It's Perfect for DMV</strong>
+            The ultimate low-commitment intro to banana growing. Lives happily in a 12–15 gallon pot indoors year-round. Container-friendly at a scale no other fruiting banana matches. The red-variegated foliage is ornamentally attractive even when not fruiting. Harvest in September–October when grown as a houseplant. An excellent starter plant before committing to larger varieties.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> Despite being 2 feet tall, a Truly Tiny plant produces proportionally full-sized bananas — the fruit-to-plant ratio is absurdly high. This is possible because banana size is determined by genetics and fruit development time, not plant height.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Praying Hands Banana</div>
+            <div class="variety-latin">Musa × 'Praying Hands' · ABB Group</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-both">Both</span>
+            <span class="badge badge-edible">Edible</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">One of the most visually distinctive banana varieties in existence. Praying Hands gets its name from a unique genetic trait where <strong>two adjacent "hands" of bananas grow fused together</strong>, with individual fingers pressed flat against each other — resembling hands clasped in prayer. Native to Southeast Asia, the flavor is mild, slightly less sweet than Cavendish, with a distinct <strong>vanilla and honey note</strong>. The unusual appearance makes it a collector's variety and a guaranteed conversation piece at any farmers market or garden party.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/praying-hands.webp" alt="Praying Hands Banana illustrated botanical plate showing the fused double bunch, individual fruit, fruit cross-section, young bunch formation, and staminate flower structure">
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 8–11</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">10–14 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Mild, vanilla-honey notes</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container + overwinter</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Southeast Asia</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why Consider It for DMV</strong>
+            Requires container growing and dedicated overwintering in the DMV, but the payoff is a banana unlike anything in any store. Bears fruit in winter months (unusual — other varieties fruit summer/fall), which means it produces on a different cycle than most. The fused hand structure is caused by a fasciation-like developmental phenomenon. High on the novelty and reward scale for patient growers.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> No other edible banana in commercial or home cultivation produces fused hands consistently as a variety trait. The fusing is genetic, not a mutation or disease. Each individual finger within the fused hand is still a normal banana with its own peel — they're attached along the sides but fully separable.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Red Dacca — Red Banana</div>
+            <div class="variety-latin">Musa acuminata 'Red Dacca' · AAA Group</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-both">Both</span>
+            <span class="badge badge-edible">Edible</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">Visually the most dramatic fruiting banana — the pseudostem, leaf undersides, and fruit are all a deep <strong>burgundy-maroon red</strong>. Widely grown across South Asia, East Africa, and the Caribbean, Red Dacca produces plump, sweet bananas with a flavor richer than Cavendish and a distinct <strong>hint of raspberry and strawberry</strong> in the flesh. The fruit ripens to a reddish-orange (not yellow), and the soft, creamy texture makes it prized for fresh eating and smoothies. In late summer when fully colored up, the pseudostem reads almost burgundy from a distance — nothing else in a garden looks like it.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Red_banana.jpg/700px-Red_banana.jpg" alt="Red Dacca — Red Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🔴</span><p>Red Dacca<br>Red Banana</p></div>'">
+            <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 8–11 (tender)</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">8–12 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Richer than Cavendish, raspberry-sweet notes</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container + overwinter</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">South Asia / Southeast Asia</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why Consider It for DMV</strong>
+            Cold-tenderness requires committed container management, but the ornamental value is extreme — it's stunning even when not fruiting. As a patio specimen from May to October, nothing draws more attention. Overwinter in a bright, warm indoor space (60°F+) rather than dormant storage to maintain pseudostem. Fruit flavor is genuinely different and superior to Cavendish for many growers.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> Red bananas contain significantly more beta-carotene (Vitamin A precursor) than yellow Cavendish bananas, which contributes to their reddish flesh. They also have higher Vitamin C content. In India, red bananas are considered auspicious and are used in religious ceremonies.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Goldfinger Banana</div>
+            <div class="variety-latin">Musa × FHIA-01 · AAAB Group (hybrid)</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-both">Both</span>
+            <span class="badge badge-edible">Edible</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">A remarkable modern hybrid developed by the Honduran Foundation for Agricultural Investigation (FHIA) in the 1980s, specifically bred to resist Panama Disease (both Race 1 and TR4), Black Sigatoka, and other major banana diseases. Goldfinger is a cross between Cavendish and Lady Finger types with an AAAB genome, making it a genuine tetraploid. The flavor is genuinely distinctive: <strong>apple-like with a slight tang when underripe</strong>, becoming richer and sweeter at full ripeness. It has gained commercial traction in Australia. It does not brown when cut — a notable practical advantage.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/goldfinger.webp" alt="Goldfinger Banana illustrated botanical plate showing the full bunch on a woven basket, natural skin specks, fruit cross-section, young bunch formation, and flower structure">
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 8–11</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">8–15 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Apple-like, tangy-sweet, no browning when cut</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container + overwinter</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Honduras (FHIA program)</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why Consider It for DMV</strong>
+            Disease resistance is genuinely valuable — even in home gardens, soil-borne pathogens can build up over time. Goldfinger's immunity to the diseases threatening Cavendish gives it long-term reliability. The distinctive apple flavor makes it excellent for fruit salads and baking (no browning means cleaner presentation). Treat as a container plant; it's worth the investment for the unique eating experience.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> Goldfinger was the result of a 10-year breeding program involving over 4,000 individual plant crosses. It is considered by plant scientists as one of the most promising candidates to eventually supplement the Cavendish in commercial production if TR4 continues spreading. Home growers growing Goldfinger today are participating in a kind of living genetic preservation program.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Gros Michel — Big Mike</div>
+            <div class="variety-latin">Musa acuminata 'Gros Michel' · AAA Group</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-both">Both</span>
+            <span class="badge badge-edible">Edible</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">The legendary banana. Before the 1960s, this was the only banana most Westerners ever ate — and many food historians argue it was simply better than the Cavendish that replaced it. Gros Michel has a <strong>richer flavor, creamier texture, thicker skin</strong> (better for shipping), and a stronger, more complex aroma. It's the banana that banana candy, banana Runts, banana Laffy Taffy, and banana ice cream flavors were all modeled on — which is why they taste nothing like modern grocery bananas. Gros Michel is still grown in small quantities in Asia, Africa, and the Caribbean and is increasingly available from specialty nurseries.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/gros-michel.webp" alt="Gros Michel 'Big Mike' Banana illustrated botanical plate showing the full bunch on a woven basket, fruit cross-section, young bunch formation, and flower structure">
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 9–11 (tender)</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">10–16 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Rich, creamy, complex — what banana candy is based on</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container + active indoor overwintering</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Southeast Asia; cultivated Martinique/Jamaica</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why Consider It for DMV</strong>
+            The most challenging edible variety on this list for DMV growing — it's cold-tender and tall, requiring a large container and a warm, bright overwinter space. But the payoff is extraordinary: tasting a genuine Gros Michel is a food experience that changes how you think about bananas. A dedicated DMV grower with a sunroom or greenhouse access can absolutely achieve this. Susceptible to Panama Disease Race 1 — use containers and sterile soil.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> The Gros Michel's collapse is one of the defining agricultural catastrophes of the 20th century. Within a decade, an estimated 40,000 acres of Gros Michel plantations in Central America were abandoned as the fungus spread through the soil. The land could not be replanted with Gros Michel for decades because the fungus persists in soil indefinitely. This history is the reason biosecurity around TR4 today is so urgently managed internationally.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="variety-card">
+        <div class="variety-header">
+          <div class="variety-header-left">
+            <div class="variety-name">Musa sikkimensis 'Ever Red'</div>
+            <div class="variety-latin">Musa sikkimensis 'Ever Red' · Species</div>
+          </div>
+          <div class="variety-badges">
+            <span class="badge badge-outdoor">Outdoor</span>
+            <span class="badge badge-cold">Zone 5!</span>
+            <span class="badge badge-ornament">Ornamental</span>
+          </div>
+        </div>
+        <div class="variety-body">
+          <div class="variety-intro">
+            <p class="variety-desc">A 2025 introduction that's generating significant excitement among cold-climate banana enthusiasts. Musa sikkimensis 'Ever Red' is a cold-hardy banana from the Sikkim region of the eastern Himalayas, with remarkable hardiness reportedly to <strong>zone 5</strong>. Its distinguishing feature is a spectacular foliage display: <strong>striking striped green leaves with deep maroon-red markings</strong> that intensify in strong light. Like Musa basjoo, it's primarily ornamental in the DMV — the fruit is not suitable for eating — but the foliage display is arguably even more dramatic. Noted by the National Garden Bureau as a "New in 2025" plant.</p>
+          </div>
+          <div class="variety-img-wrap">
+            <img src="images/ever-red.webp" alt="Musa sikkimensis 'Ever Red' illustrated botanical plate showing the full plant with striking maroon-red striped foliage">
+          </div>
+          <div class="variety-specs">
+            <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 5 (exceptional)</span></div>
+            <div class="spec-row"><span class="spec-label">Height</span><span class="spec-val">10–15 ft</span></div>
+            <div class="spec-row"><span class="spec-label">Fruit</span><span class="spec-val">Inedible</span></div>
+            <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Ground + mulch</span></div>
+            <div class="spec-row"><span class="spec-label">Ease</span>
+              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+            </div>
+            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Sikkim / Darjeeling, India/Nepal border</span></div>
+          </div>
+          <div class="variety-highlight">
+            <strong>Why It's Perfect for DMV</strong>
+            If basjoo is the workhorse of cold-hardy DMV banana growing, 'Ever Red' is the showstopper. Zone 5 hardiness means even the coldest DMV winters present essentially no challenge to the corm. The maroon-red foliage makes it visually distinct from all other bananas — you won't see it in anyone else's garden. Being brand new to the market (2025–26), it's a chance to be an early adopter of what may become the most popular cold-hardy ornamental banana in the region.
+          </div>
+          <div class="variety-body-full">
+            <p class="variety-desc"><strong>Interesting fact:</strong> Musa sikkimensis grows wild in mountain forests at elevations up to 6,500 feet in the Sikkim and Darjeeling regions, where winter temperatures regularly drop well below freezing. This evolutionary adaptation to genuine mountain winters is what gives it cold tolerance that shames most other Musa species.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end variety-grid -->
+  </div>
+</section>
+
+<!-- CARE GUIDE -->
+<section id="care">
+  <div class="container">
+    <div class="section-eyebrow">Year-Round Care</div>
+    <h2>Soil, Feeding, Water & Light</h2>
+
+    <h3>Soil</h3>
+    <p>Bananas are heavy feeders that demand rich, <strong>well-draining soil</strong>. Waterlogged soil causes corm rot — the single most common cause of banana plant death. For in-ground planting, amend with generous compost and ensure the site does not hold standing water. For containers, never use garden soil (it compacts and drains poorly). A quality container mix:</p>
+    <div class="callout green">
+      <div class="callout-title">🌱 Container Soil Recipe</div>
+      <p>60% quality potting mix + 20% perlite or coarse pumice + 20% worm castings or aged compost. Target pH: 5.5–7.0 (slightly acidic to neutral). Add a slow-release fertilizer pellet at planting.</p>
+    </div>
+
+    <h3>Fertilizer</h3>
+    <p>Bananas are among the hungriest plants you'll grow. The ideal N-P-K ratio is <strong>3-1-6</strong> — potassium-heavy, as potassium drives fruiting. During the growing season (May–September), feed every 2–4 weeks with a high-potassium liquid fertilizer. Monthly during active indoor overwintering. Signs of potassium deficiency: yellow leaf margins. Signs of nitrogen deficiency: pale, stunted new growth.</p>
+    <ul class="leaf-list">
+      <li><strong>Early spring (emerging):</strong> Nitrogen-heavy feed to push vegetative growth</li>
+      <li><strong>Mid-summer (established):</strong> Switch to potassium-heavy (e.g., tomato/fruit fertilizer) to push toward flowering</li>
+      <li><strong>Fall (winding down):</strong> Reduce feeding; allow the plant to transition</li>
+      <li><strong>Winter dormancy:</strong> No fertilizer</li>
+    </ul>
+
+    <h3>Water</h3>
+    <p>Bananas can consume 1–2 inches of water per week in peak summer. Keep soil consistently moist but never waterlogged. DMV summers are humid enough that outdoor plants need less supplemental irrigation than in drier climates, but during drought stretches, deep watering 2–3x per week is appropriate. Container plants dry out faster and may need daily checks in July and August.</p>
+    <p>For dormant overwintering containers: water sparingly — once every 2–3 weeks is typically sufficient to keep the corm alive. Never let the corm dessicate completely, but avoid wet-rotting conditions.</p>
+
+    <h3>Light</h3>
+    <p>Outdoors: full sun (6–8+ hours) is ideal. The more light, the faster growth and more likely fruiting. Against a south-facing wall maximizes both light and reflected warmth.</p>
+    <p>Indoors: the limiting factor for most DMV homes. Bananas need the equivalent of 6+ hours of bright, direct-equivalent light. A south-facing window with no obstructions is the minimum. Supplemental LED grow lights (full-spectrum, positioned 12–18 inches above the canopy) dramatically improve both growth rate and fruiting prospects.</p>
+  </div>
+</section>
+
+<!-- OVERWINTER -->
+<section id="overwinter">
+  <div class="container">
+    <div class="section-eyebrow">Winter Survival in the DMV</div>
+    <h2>Overwintering Your Bananas</h2>
+
+    <h3>Method 1: In-Ground Mulch Protection</h3>
+    <p>Recommended for Musa basjoo, Musa velutina, Musella lasiocarpa, and Dwarf Orinoco in warmer DMV zones. The University of Maryland Extension confirms this works in Baltimore City, Southern Maryland, and the Eastern Shore.</p>
+    <ol class="steps">
+      <li>After frost kills the foliage (typically November), cut the pseudostem back to 12–18 inches above the ground.</li>
+      <li>Build a cage of chicken wire or hardware cloth around the stump, 2–3 feet in diameter and 2+ feet tall.</li>
+      <li>Fill the cage completely with dry leaves or straw, packing loosely for airflow.</li>
+      <li>Cover the top with a plastic tarp or cardboard to shed rain and snow (wet insulation loses effectiveness).</li>
+      <li>In spring, when nighttime temperatures consistently stay above 50°F (typically mid-April in DC, late April in suburbs), remove the cage and mulch gradually over 1–2 weeks.</li>
+      <li>Begin watering and resume feeding as new growth appears, typically from April through May.</li>
+    </ol>
+
+    <h3>Method 2: Container Dormant Storage</h3>
+    <p>For container-grown edible varieties brought indoors for the winter.</p>
+    <ol class="steps">
+      <li>Before the first fall frost (watch forecasts from late October onward), bring containers inside to a frost-free space.</li>
+      <li>Treat with insecticidal soap or horticultural oil before moving indoors to prevent bringing pests into the house.</li>
+      <li>Place in a cool (45–55°F), low-light space — an unheated garage, basement, or storage area. The plant will lose its leaves; this is normal.</li>
+      <li>Water very sparingly — approximately once every 3 weeks, just enough to prevent the corm from completely desiccating. Do not fertilize.</li>
+      <li>In April, move to a sunny indoor location, increase watering, and begin fertilizing. Move outdoors after last frost.</li>
+    </ol>
+
+    <h3>Method 3: Active Indoor Overwintering</h3>
+    <p>For tropical varieties (Red Dacca, Gros Michel, Praying Hands) that need continuous warmth, or to maintain an active growing plant through winter for earlier spring fruiting.</p>
+    <ol class="steps">
+      <li>Move the container to the brightest available indoor location — a sunroom, greenhouse, or south-facing bay window.</li>
+      <li>Supplement with full-spectrum LED grow lights if natural light is insufficient.</li>
+      <li>Maintain temperatures above 60°F (ideally 65–75°F). Keep away from cold drafts and heating vents.</li>
+      <li>Maintain humidity — run a humidifier nearby or group plants together. Mist leaves periodically.</li>
+      <li>Reduce watering and fertilizing by 50–75% compared to summer rates, but do not allow the plant to fully dry out.</li>
+      <li>Resume normal care when moving back outdoors in late May.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- INDOOR -->
+<section id="indoor">
+  <div class="container">
+    <div class="section-eyebrow">Year-Round Indoor Growing</div>
+    <h2>Indoor & Container Growing Masterclass</h2>
+
+    <h3>Container Sizing by Variety</h3>
+    <table class="ref-table">
+      <thead><tr><th>Variety</th><th>Min Container</th><th>Ideal Container</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Truly Tiny</td><td>12–15 gallon</td><td>15 gallon</td><td>Can live here permanently</td></tr>
+        <tr><td>Super Dwarf Cavendish</td><td>15 gallon</td><td>18–25 gallon</td><td>Upgrade as plant matures</td></tr>
+        <tr><td>Dwarf Cavendish</td><td>20 gallon</td><td>25–30 gallon</td><td>Larger = more fruit</td></tr>
+        <tr><td>Dwarf Namwa / Raja Puri</td><td>20 gallon</td><td>25–35 gallon</td><td>Productive at larger volumes</td></tr>
+        <tr><td>Blue Java</td><td>25 gallon</td><td>30–40 gallon</td><td>Tall variety; use heavy pot for stability</td></tr>
+        <tr><td>Red Dacca / Gros Michel</td><td>30 gallon</td><td>40+ gallon</td><td>Heavy; use dolly for mobility</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Pot Material Considerations</h3>
+    <p>Heavy ceramic or terracotta provides stability for tall plants but is heavy to move (key for overwintering). Large fabric grow bags provide excellent drainage and air-pruning of roots, are lighter, and store flat in winter — but tip in wind. Plastic is the most practical for container-overwintering because it's light and retains moisture well. Whatever you choose, <strong>drainage holes are non-negotiable</strong> — multiple large holes preferred.</p>
+
+    <h3>The Pup Management System</h3>
+    <p>Bananas send up offshoots (pups or "suckers") from the corm throughout the growing season. Managing pups is central to fruit production:</p>
+    <ul class="leaf-list">
+      <li><strong>For fruiting:</strong> Keep only 1 main stem + 1 successor pup (the strongest). Remove all others at ground level with a sharp spade. Allowing multiple pups divides the plant's energy and delays fruiting.</li>
+      <li><strong>For clump display (ornamental):</strong> Allow 3–5 stems of different ages for a layered tropical effect.</li>
+      <li><strong>For propagation:</strong> Remove a pup when it's 12–18 inches tall with its own roots (a "sword sucker" with narrow, pointed leaves, not a "water sucker" with wide leaves). Pot it into its own container with good soil. A sword sucker will fruit faster than a water sucker.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PESTS -->
+<section id="pests">
+  <div class="container">
+    <div class="section-eyebrow">Pest & Disease Management</div>
+    <h2>Common Issues in the DMV Garden</h2>
+
+    <div class="pest-row">
+      <div class="pest-name">Spider Mites</div>
+      <div><span class="pest-label">Signs</span>Fine webbing on leaf undersides, bronze stippling, yellowing</div>
+      <div><span class="pest-label">Treatment</span>Increase humidity; spray with insecticidal soap or neem oil every 5–7 days. More common on indoor plants in low-humidity DMV winters.</div>
+    </div>
+    <div class="pest-row">
+      <div class="pest-name">Aphids</div>
+      <div><span class="pest-label">Signs</span>Clustered soft-bodied insects on new growth, honeydew residue</div>
+      <div><span class="pest-label">Treatment</span>Strong water spray; insecticidal soap. Rarely serious on healthy outdoor plants.</div>
+    </div>
+    <div class="pest-row">
+      <div class="pest-name">Banana Weevil Borer</div>
+      <div><span class="pest-label">Signs</span>Wilting or collapsing pseudostem; tunneling visible in cut stems</div>
+      <div><span class="pest-label">Treatment</span>Remove and destroy affected stems. Use clean corms/pups from certified sources. Keep mulch away from pseudostem base.</div>
+    </div>
+    <div class="pest-row">
+      <div class="pest-name">Sigatoka (Leaf Spot)</div>
+      <div><span class="pest-label">Signs</span>Yellow-brown streaks on leaves progressing to large necrotic patches; common in humid DMV summers</div>
+      <div><span class="pest-label">Treatment</span>Remove affected leaves promptly. Improve air circulation. Copper-based fungicide as preventative in humid periods.</div>
+    </div>
+    <div class="pest-row">
+      <div class="pest-name">Corm Rot (Fusarium/Root rot)</div>
+      <div><span class="pest-label">Signs</span>Yellowing, wilting despite adequate water; soft corm when dug</div>
+      <div><span class="pest-label">Treatment</span>Prevention only — ensure excellent drainage. This is almost always caused by overwatering or poor drainage. No reliable treatment once established; remove and destroy plant.</div>
+    </div>
+    <div class="pest-row">
+      <div class="pest-name">Wind Damage</div>
+      <div><span class="pest-label">Signs</span>Shredded, tattered leaves (normal to some degree); snapped pseudostems in severe storms</div>
+      <div><span class="pest-label">Treatment</span>Site selection is key — plant in wind-sheltered locations. Shredded leaves are cosmetic and don't harm the plant. Stake large containers before heavy storms.</div>
+    </div>
+
+    <div class="callout earth">
+      <div class="callout-title">🚨 Important Note on Tropical Race 4</div>
+      <p>Tropical Race 4 (TR4), the fungal disease threatening Cavendish bananas commercially worldwide, has not been confirmed in U.S. mainland soils as of 2026. As a precaution, growing Cavendish-type varieties in containers (rather than garden soil) is wise, and never import plant material from Asia or Central America without quarantine inspection. Washing shoes and tools after visiting any banana plantation is standard biosecurity practice.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HARVEST -->
+<section id="harvest">
+  <div class="container">
+    <div class="section-eyebrow">The Payoff</div>
+    <h2>Harvest, Ripening & Culinary Uses</h2>
+
+    <h3>Knowing When to Harvest</h3>
+    <p>Counterintuitively, bananas are harvested <strong>before they ripen</strong> — green or just barely turning yellow. The fruit fills and rounds out in the fingers; once individual bananas have plumped up (gone from angular to rounded) and the flower petals at the tip have dried and fallen, the bunch is ready to cut. Leaving bananas to ripen on the plant is fine in a warm climate but can attract pests and birds; DMV growers should cut the bunch and ripen indoors.</p>
+
+    <h3>Indoor Ripening</h3>
+    <p>Hang the cut bunch (by its stem, upside down) in a warm room at 65–75°F. Bananas produce ethylene gas as they ripen, which accelerates the process. To ripen faster: place in a paper bag with an apple or another banana. To slow ripening: separate hands and store at room temperature — never refrigerate unripe bananas (cold damages the skin and stops ripening). Ripe bananas can be stored in the freezer (peeled) for use in smoothies and baking.</p>
+
+    <h3>What to Do With a Lot of Bananas</h3>
+    <ul class="leaf-list">
+      <li><strong>Freeze immediately:</strong> Peel, freeze on a sheet pan, transfer to bags. Perfect for smoothies (no ice needed).</li>
+      <li><strong>Banana bread & baking:</strong> Overripe frozen bananas make the best banana bread.</li>
+      <li><strong>Banana blossom cooking:</strong> The large purple flower bud is edible and is a remarkable meat substitute — pulled banana blossom mimics pulled pork in texture. Used widely in Southeast Asian cuisine.</li>
+      <li><strong>Banana leaves:</strong> Large leaves can be used to wrap foods for steaming, grilling, or baking — they impart a subtle grassy flavor and keep food moist.</li>
+      <li><strong>Green cooking:</strong> Orinoco and Namwa are excellent as cooking bananas when green — boiled, fried, or made into tostones.</li>
+      <li><strong>Banana "tea" fertilizer:</strong> Chop peels, steep in water for 48 hours, dilute, and use as a potassium-rich liquid fertilizer for other plants.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SOURCING -->
+<section id="sourcing">
+  <div class="container">
+    <div class="section-eyebrow">Where to Buy</div>
+    <h2>Sourcing Guide for DMV Growers</h2>
+    <p>Quality sourcing is important — cheap or mislabeled plants are common. Look for tissue-culture starts (disease-free) or reputable division/pup sources with accurate species identification.</p>
+
+    <div class="sourcing-card">
+      <h4>Plant Delights Nursery (Raleigh, NC)</h4>
+      <p>One of the premier specialty nurseries in the eastern US, actively trialing cold-hardy bananas in zone 7b conditions. Their banana and tropical selection is curated for zone 7 success. Ships nationwide; also sells Musa velutina, basjoo, and other cold-hardy ornamentals. Highly trusted.</p>
+      <p><strong>Best for:</strong> Musa velutina, Musa basjoo, Musella lasiocarpa, Musa sikkimensis 'Ever Red'</p>
+    </div>
+    <div class="sourcing-card">
+      <h4>Wellspring Gardens (Online)</h4>
+      <p>Specializes in rare and unusual fruiting plants including Dwarf Namwa (Pisang Awak), Raja Puri, and other cold-tolerant edibles. Tissue culture and division stock. Excellent variety descriptions with accurate zone information.</p>
+      <p><strong>Best for:</strong> Dwarf Namwa, Raja Puri, edible cold-tolerant varieties</p>
+    </div>
+    <div class="sourcing-card">
+      <h4>Urban Tropicals (Online)</h4>
+      <p>Large inventory of banana varieties with multiple size options. Known for accurate variety labeling (important — mislabeling is common in the banana trade). Good for Blue Java, Dwarf Cavendish, and specialty varieties.</p>
+      <p><strong>Best for:</strong> Blue Java, Red Dacca, Praying Hands, Gros Michel</p>
+    </div>
+    <div class="sourcing-card">
+      <h4>Fast Growing Trees (Online)</h4>
+      <p>Mainstream specialty nursery with good shipping and plant health track record. Carries Blue Java ("Ice Cream Banana"), Dwarf Cavendish, and several other varieties at good starting sizes. Often has pre-grown specimens that reduce time to fruiting.</p>
+      <p><strong>Best for:</strong> Blue Java, Dwarf Cavendish, beginners wanting a head start</p>
+    </div>
+    <div class="sourcing-card">
+      <h4>Just Fruits and Exotics (Tallahassee, FL)</h4>
+      <p>Florida-based specialty nursery with extensive banana selection, particularly good for the edible tropical varieties. Ships May–October. Excellent source for Blue Java, Gros Michel, and Lady Finger types.</p>
+      <p><strong>Best for:</strong> Tropical edible varieties; good pre-shipping customer support</p>
+    </div>
+    <div class="sourcing-card">
+      <h4>Local Sources: DMV-Area Tropical Plant Societies</h4>
+      <p>The Mid-Atlantic Hardy Plant Society and several local horticultural clubs regularly exchange banana pups at spring plant swaps. Buying a pup from a local DMV grower who has successfully overwintered a variety is the gold standard — you know the plant has been through local winters. Check Facebook groups "Mid-Atlantic Tropicals" and "DC Area Gardeners" in spring.</p>
+      <p><strong>Best for:</strong> Cold-proven pups of Musa basjoo, velutina, Orinoco at low or no cost</p>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">📦 Timing Your Order</div>
+      <p>Order bare-root corms in late March for May planting. They ship well and establish faster than you'd expect. Avoid ordering live plants during temperature extremes (below 40°F or above 95°F in transit). Most specialty nurseries ship with heat packs in cold weather — confirm before ordering in March or April.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FUN FACTS -->
+<section id="facts">
+  <div class="container">
+    <div class="section-eyebrow">Curiosities</div>
+    <h2>Remarkable & Unusual Facts About Bananas</h2>
+    <div class="fun-fact-grid">
+      <div class="fun-fact">
+        <span class="fun-fact-icon">🍓</span>
+        <p><strong>Bananas are technically berries.</strong> Botanically speaking, bananas are classified as berries — they develop from a single flower with a fleshy pericarp. Strawberries, meanwhile, are technically not berries. Botanical nomenclature is delightfully counterintuitive.</p>
+      </div>
+      <div class="fun-fact">
+        <span class="fun-fact-icon">☢️</span>
+        <p><strong>Bananas are mildly radioactive.</strong> They contain naturally occurring Potassium-40 (K-40), a radioactive isotope. The amount is tiny and harmless — your body maintains a constant level regardless of banana consumption. The "Banana Equivalent Dose" (BED) is used by physicists as an informal unit of radiation exposure.</p>
+      </div>
+      <div class="fun-fact">
+        <span class="fun-fact-icon">🧬</span>
+        <p><strong>Humans share 60% of their DNA with bananas.</strong> Both humans and bananas share genes for fundamental cellular processes — transcription, energy production, cell structure. It's a frequently cited statistic that surprises people but reflects how conserved basic life machinery is across all living things.</p>
+      </div>
+      <div class="fun-fact">
+        <span class="fun-fact-icon">🌍</span>
+        <p><strong>Bananas are the world's most popular fruit</strong> by volume traded internationally and are a dietary staple for over 400 million people globally, providing up to 25% of caloric intake in parts of East Africa and the Pacific islands.</p>
+      </div>
+      <div class="fun-fact">
+        <span class="fun-fact-icon">🌊</span>
+        <p><strong>Wild bananas have seeds the size of pebbles.</strong> Every edible banana is a sterile triploid (or tetraploid) hybrid — it cannot reproduce from seed. Wild ancestors like Musa acuminata have large, hard seeds filling the fruit flesh. All cultivated bananas must be propagated vegetatively through pups and corms.</p>
+      </div>
+      <div class="fun-fact">
+        <span class="fun-fact-icon">🍬</span>
+        <p><strong>Banana candy isn't wrong — it's nostalgic.</strong> Banana-flavored candy was formulated to mimic the Gros Michel, not the Cavendish. When the Gros Michel collapsed commercially in the 1960s, the candy flavor wasn't updated — it still accurately captures a banana variety that most people born after 1970 have never tasted.</p>
+      </div>
+      <div class="fun-fact">
+        <span class="fun-fact-icon">🌸</span>
+        <p><strong>A banana "tree" flowers exactly once, then dies.</strong> Each pseudostem has one shot at producing fruit. After the bunch is harvested, the pseudostem yellows and dies, but the corm pushes up pups — the next generation. A banana clump in your garden is, in a sense, an immortal organism: the corm keeps living and regenerating indefinitely.</p>
+      </div>
+      <div class="fun-fact">
+        <span class="fun-fact-icon">🏔️</span>
+        <p><strong>The highest-altitude banana grows at 9,000 feet.</strong> Musa sikkimensis (including the 'Ever Red' cultivar) grows wild in Himalayan mountain forests, making it one of the most cold-adapted plants in the entire Musa genus. Its discovery surprised botanists who assumed bananas were strictly lowland tropical plants.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK REF TABLE -->
+<section id="quickref">
+  <div class="container">
+    <div class="section-eyebrow">At a Glance</div>
+    <h2>Quick Reference: All 15 Varieties</h2>
+    <p>A scannable comparison of all varieties covered in this guide.</p>
+    <div style="overflow-x: auto;">
+    <table class="ref-table" style="min-width: 750px;">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Variety</th>
+          <th>Type</th>
+          <th>Zone</th>
+          <th>Height</th>
+          <th>Flavor / Use</th>
+          <th>Best Strategy</th>
+          <th>Ease ★</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Musa basjoo</td><td>Ornamental</td><td><span class="zone-pill">5–10</span></td><td>10–15 ft</td><td>Inedible / Foliage drama</td><td>Ground + mulch</td><td>★★★★★</td></tr>
+        <tr><td>2</td><td>Pink Velvet (M. velutina)</td><td>Ornamental</td><td><span class="zone-pill">7b–11</span></td><td>5–8 ft</td><td>Seedy / Pink self-splitting fruit</td><td>Ground or container</td><td>★★★★☆</td></tr>
+        <tr><td>3</td><td>Golden Lotus (Musella)</td><td>Ornamental</td><td><span class="zone-pill">7–10</span></td><td>3–6 ft</td><td>Inedible / Artichoke flower 8 months</td><td>Ground or container</td><td>★★★★☆</td></tr>
+        <tr><td>4</td><td>Dwarf Orinoco</td><td>Edible</td><td><span class="zone-pill">7–11</span></td><td>6–8 ft</td><td>Mild, starchy-sweet; good green</td><td>Ground + mulch or container</td><td>★★★★☆</td></tr>
+        <tr><td>5</td><td>Raja Puri</td><td>Edible</td><td><span class="zone-pill">7–11</span></td><td>8–10 ft</td><td>Sweet, creamy, mildly tart</td><td>Container (preferred)</td><td>★★★★☆</td></tr>
+        <tr><td>6</td><td>Blue Java (Ice Cream)</td><td>Edible</td><td><span class="zone-pill warm">8–11</span></td><td>10–15 ft</td><td>Custardy, vanilla-like</td><td>Container + overwinter</td><td>★★★☆☆</td></tr>
+        <tr><td>7</td><td>Dwarf Cavendish</td><td>Edible</td><td><span class="zone-pill warm">8–10</span></td><td>6–9 ft</td><td>Classic grocery banana</td><td>Container + overwinter</td><td>★★★☆☆</td></tr>
+        <tr><td>8</td><td>Dwarf Namwa</td><td>Edible</td><td><span class="zone-pill">7b–11</span></td><td>6–10 ft</td><td>Sweet-creamy, vanilla-tang, pineapple hints</td><td>Container or in-ground</td><td>★★★★☆</td></tr>
+        <tr><td>9</td><td>Super Dwarf Cavendish</td><td>Edible</td><td><span class="zone-pill warm">Indoor</span></td><td>3–5 ft</td><td>Classic Cavendish flavor</td><td>True houseplant</td><td>★★★☆☆</td></tr>
+        <tr><td>10</td><td>Truly Tiny</td><td>Edible</td><td><span class="zone-pill warm">Indoor</span></td><td>2–3 ft</td><td>Sweet, small Cavendish-type</td><td>True houseplant</td><td>★★★☆☆</td></tr>
+        <tr><td>11</td><td>Praying Hands</td><td>Edible</td><td><span class="zone-pill warm">8–11</span></td><td>10–14 ft</td><td>Mild, vanilla-honey; fused hands</td><td>Container + overwinter</td><td>★★★☆☆</td></tr>
+        <tr><td>12</td><td>Red Dacca</td><td>Edible</td><td><span class="zone-pill warm">8–11</span></td><td>8–12 ft</td><td>Raspberry-sweet, richer than Cavendish</td><td>Container + active indoor</td><td>★★★☆☆</td></tr>
+        <tr><td>13</td><td>Goldfinger (FHIA-01)</td><td>Edible</td><td><span class="zone-pill warm">8–11</span></td><td>8–15 ft</td><td>Apple-tangy; no browning; disease-resistant</td><td>Container + overwinter</td><td>★★★☆☆</td></tr>
+        <tr><td>14</td><td>Gros Michel</td><td>Edible</td><td><span class="zone-pill hot">9–11</span></td><td>10–16 ft</td><td>Rich, creamy, complex — the legendary banana</td><td>Container + active indoor</td><td>★★☆☆☆</td></tr>
+        <tr><td>15</td><td>M. sikkimensis 'Ever Red'</td><td>Ornamental</td><td><span class="zone-pill">5–11</span></td><td>10–15 ft</td><td>Inedible / Dramatic red-striped foliage</td><td>Ground + mulch</td><td>★★★★★</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="margin-top: 12px; font-size: 13px; color: var(--ink-light);">★ Ease score: ★★★★★ = effortless perennial; ★★☆☆☆ = requires consistent management and ideal conditions.</p>
+  </div>
+</section>
+
+<!-- STARTER KIT -->
+<section id="starterkit">
+  <div class="container">
+    <div class="section-eyebrow">Curated Recommendations</div>
+    <h2>DMV Starter Kits: Your First Purchase</h2>
+    <p>Don't try to grow all 15 at once. These curated kits are designed around realistic DMV goals — each one is a complete, self-contained starting point that builds skills before you add complexity. Pick the kit that matches your situation and ambition.</p>
+
+    <!-- KIT 1 -->
+    <div style="background: var(--white); border: 2px solid var(--leaf); border-radius: 14px; overflow: hidden; margin: 28px 0;">
+      <div style="background: var(--leaf); padding: 16px 24px; display: flex; align-items: center; gap: 14px;">
+        <span style="font-size: 32px;">🌿</span>
+        <div>
+          <div style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--banana); margin-bottom: 4px;">Kit 1 — The No-Fail Foundation</div>
+          <div style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--white);">Cold-Hardy Ornamental Trio</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 2px;">Best for: Anyone with outdoor space · Zero risk · Maximum tropical drama</div>
+        </div>
+      </div>
+      <div style="padding: 22px 24px;">
+        <p style="font-size: 15px; margin-bottom: 18px;">This kit is designed for the DMV grower who wants guaranteed success their first season, with no risk of winter loss. All three plants overwinter in the ground with nothing more than a mulch pile. You will have a showstopping tropical garden by August, and the same plants will come back bigger every year. No containers. No overwintering logistics. Just plant, mulch, repeat.</p>
+        <div style="display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 18px;">
+          <div style="background: var(--parchment); border-radius: 8px; padding: 14px 16px;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--leaf-mid); margin-bottom: 6px;">Plant 1</div>
+            <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 16px; margin-bottom: 4px;">Musa basjoo</div>
+            <div style="font-size: 13px; color: var(--ink-light);">The workhorse. Plant 2–3 for an instant tropical screen. Hardy to zone 5. Will reach 10–12 ft in one season.</div>
+          </div>
+          <div style="background: var(--parchment); border-radius: 8px; padding: 14px 16px;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--leaf-mid); margin-bottom: 6px;">Plant 2</div>
+            <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 16px; margin-bottom: 4px;">Musa velutina</div>
+            <div style="font-size: 13px; color: var(--ink-light);">The showpiece. Pink self-splitting fruit in late summer. 5–8 ft, hardy zone 7b. Plant at the front of the border.</div>
+          </div>
+          <div style="background: var(--parchment); border-radius: 8px; padding: 14px 16px;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--leaf-mid); margin-bottom: 6px;">Plant 3</div>
+            <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 16px; margin-bottom: 4px;">Musella lasiocarpa</div>
+            <div style="font-size: 13px; color: var(--ink-light);">The conversation piece. 3–6 ft with a golden lotus flower lasting up to 8 months. Perfect for a container or accent spot.</div>
+          </div>
+        </div>
+        <div style="background: #EFF6E6; border-radius: 8px; padding: 14px 18px; font-size: 14px;">
+          <strong style="display:block; font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--leaf-mid); margin-bottom: 6px;">📋 First Season Plan</strong>
+          Order all three in April for May planting. Plant basjoo against a south-facing wall or fence (full sun). Place velutina in a front border or bed edge. Use Musella in a large container or sheltered garden corner. In November: cage and mulch basjoo and velutina; bring Musella container to an unheated garage (it's forgiving). You'll have an established, spreading tropical garden by year two — at essentially zero ongoing cost.
+        </div>
+        <div style="margin-top: 14px; font-size: 14px;"><strong>Estimated first-year cost:</strong> $40–$90 for all three plants, depending on starting size. Total ongoing annual effort: ~2 hours of fall mulching + 1 hour of spring cleanup.</div>
+      </div>
+    </div>
+
+    <!-- KIT 2 -->
+    <div style="background: var(--white); border: 2px solid var(--earth-light); border-radius: 14px; overflow: hidden; margin: 28px 0;">
+      <div style="background: var(--earth-light); padding: 16px 24px; display: flex; align-items: center; gap: 14px;">
+        <span style="font-size: 32px;">🍌</span>
+        <div>
+          <div style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--banana); margin-bottom: 4px;">Kit 2 — The Fruit Chaser</div>
+          <div style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--white);">Container Edible Duo</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.8); margin-top: 2px;">Best for: Growers who want to eat what they grow · Outdoor space + garage/basement for winter</div>
+        </div>
+      </div>
+      <div style="padding: 22px 24px;">
+        <p style="font-size: 15px; margin-bottom: 18px;">Two container-grown edible varieties — one cold-tolerant anchor and one flavor standout. Both go outdoors May through October and overwinter in a cool basement or garage. Together they teach you the full banana growing cycle and give you a realistic shot at harvesting edible bananas within 2–3 years. Intentionally kept to two plants so you can learn the routine without being overwhelmed.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px;">
+          <div style="background: var(--parchment); border-radius: 8px; padding: 14px 16px;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--earth); margin-bottom: 6px;">Plant 1 — The Anchor</div>
+            <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 16px; margin-bottom: 4px;">Raja Puri</div>
+            <div style="font-size: 13px; color: var(--ink-light);">Zone 7-tolerant, compact (8–10 ft in a 30-gal pot), sweet creamy fruit. Fastest realistic path to eating your own banana. Can even try in-ground if you're in DC proper / Southern MD.</div>
+          </div>
+          <div style="background: var(--parchment); border-radius: 8px; padding: 14px 16px;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--earth); margin-bottom: 6px;">Plant 2 — The Flavor Adventure</div>
+            <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 16px; margin-bottom: 4px;">Blue Java (Ice Cream)</div>
+            <div style="font-size: 13px; color: var(--ink-light);">The vanilla-custard experience you've heard about. Longer to fruit (2–3 years), but the payoff is extraordinary. Container in 30–40 gallon; overwinter in a cool but frost-free space.</div>
+          </div>
+        </div>
+        <div style="background: #F5EDE5; border-radius: 8px; padding: 14px 18px; font-size: 14px;">
+          <strong style="display:block; font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--earth); margin-bottom: 6px;">📋 First Season Plan</strong>
+          Order in late April / early May. Plant each into a 30-gallon fabric grow bag with a well-draining potting mix. Place in the sunniest, most sheltered outdoor spot (south-facing wall is ideal). Feed with high-potassium fertilizer every 3 weeks from June through September. Before first frost (watch late October forecasts), treat with insecticidal soap, then move bags to an unheated garage (45–55°F). Water once every 3 weeks through winter. Move back out after last frost. Repeat.
+        </div>
+        <div style="margin-top: 14px; font-size: 14px;"><strong>Estimated first-year cost:</strong> $50–$120 for both plants + ~$40 for two 30-gallon fabric pots + $20 for potting mix. Total.</div>
+      </div>
+    </div>
+
+    <!-- KIT 3 -->
+    <div style="background: var(--white); border: 2px solid var(--ink-mid); border-radius: 14px; overflow: hidden; margin: 28px 0;">
+      <div style="background: var(--ink-mid); padding: 16px 24px; display: flex; align-items: center; gap: 14px;">
+        <span style="font-size: 32px;">🏠</span>
+        <div>
+          <div style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--banana); margin-bottom: 4px;">Kit 3 — The Indoor Grower</div>
+          <div style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--white);">Apartment / No-Yard Duo</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 2px;">Best for: No outdoor space · Balcony or south-facing window · Year-round indoor tropical</div>
+        </div>
+      </div>
+      <div style="padding: 22px 24px;">
+        <p style="font-size: 15px; margin-bottom: 18px;">Two compact varieties that can live their entire lives indoors. One is a true micro-banana that will produce fruit in a 15-gallon pot in a bright room. The other is a cold-hardy ornamental that doubles as a dramatic houseplant when basjoo is too large. Perfect for a DMV apartment dweller with a bright south-facing window or a full-spectrum LED grow light setup.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px;">
+          <div style="background: var(--parchment); border-radius: 8px; padding: 14px 16px;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-light); margin-bottom: 6px;">Plant 1 — The Fruiter</div>
+            <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 16px; margin-bottom: 4px;">Super Dwarf Cavendish</div>
+            <div style="font-size: 13px; color: var(--ink-light);">3–5 ft max. Lives in an 18–25 gallon pot. Classic Cavendish bananas on a plant that fits in a living room. Supplemental LED grow light (full spectrum, 12–18 hrs/day) makes a significant difference for fruiting.</div>
+          </div>
+          <div style="background: var(--parchment); border-radius: 8px; padding: 14px 16px;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-light); margin-bottom: 6px;">Plant 2 — The Statement Piece</div>
+            <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 16px; margin-bottom: 4px;">Truly Tiny Banana</div>
+            <div style="font-size: 13px; color: var(--ink-light);">2–3 ft max. The world's smallest fruiting banana. Lives permanently in a 12–15 gallon pot. Produces real edible bananas on a plant smaller than most houseplants. Conversation guaranteed.</div>
+          </div>
+        </div>
+        <div style="background: var(--parchment-dark); border-radius: 8px; padding: 14px 18px; font-size: 14px;">
+          <strong style="display:block; font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-light); margin-bottom: 6px;">📋 First Season Plan</strong>
+          Place both in the brightest indoor location available — ideally a south-facing window. Add a full-spectrum LED grow light on a 14-hour timer if natural light is limited. Use a humidifier nearby (bananas love 50%+ humidity; DMV winters are very dry indoors). Feed with a potassium-heavy liquid fertilizer every 3–4 weeks during spring and summer. Mist leaves weekly. Keep away from cold drafts and heating vents.
+        </div>
+        <div style="margin-top: 14px; font-size: 14px;"><strong>Estimated first-year cost:</strong> $30–$80 for both plants + $25–$60 for LED grow light + soil + pots. Highly manageable.</div>
+      </div>
+    </div>
+
+    <!-- KIT 4 -->
+    <div style="background: var(--white); border: 2px solid var(--banana-deep); border-radius: 14px; overflow: hidden; margin: 28px 0;">
+      <div style="background: linear-gradient(135deg, var(--leaf), var(--earth)); padding: 16px 24px; display: flex; align-items: center; gap: 14px;">
+        <span style="font-size: 32px;">🏆</span>
+        <div>
+          <div style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--banana); margin-bottom: 4px;">Kit 4 — The Full Collection</div>
+          <div style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--white);">The Serious DMV Banana Grower</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 2px;">Best for: You've done Kit 1 or 2 successfully · Ready to go deep · Have outdoor + indoor space</div>
+        </div>
+      </div>
+      <div style="padding: 22px 24px;">
+        <p style="font-size: 15px; margin-bottom: 18px;">This is the build-out kit for a grower who wants to cover every experience category: cold-hardy ornamentals, flavor-forward edibles, conversation pieces, and a legendary variety. Six carefully chosen plants that complement each other and don't significantly overlap in function or timing.</p>
+        <div style="display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-bottom: 18px;">
+          <div style="background: var(--parchment); border-radius: 8px; padding: 12px 14px; font-size: 13px;">
+            <strong style="display:block; color: var(--leaf); margin-bottom: 3px;">🌿 Musa basjoo</strong>
+            The perennial backbone. Plant 2–3 for a tropical screen. Ground + mulch.
+          </div>
+          <div style="background: var(--parchment); border-radius: 8px; padding: 12px 14px; font-size: 13px;">
+            <strong style="display:block; color: var(--leaf); margin-bottom: 3px;">🌸 Musa velutina</strong>
+            The ornamental accent. Pink fruit in late summer, zone 7b hardy.
+          </div>
+          <div style="background: var(--parchment); border-radius: 8px; padding: 12px 14px; font-size: 13px;">
+            <strong style="display:block; color: var(--earth); margin-bottom: 3px;">🍌 Raja Puri</strong>
+            Your fastest edible producer. Container, overwintered dormant.
+          </div>
+          <div style="background: var(--parchment); border-radius: 8px; padding: 12px 14px; font-size: 13px;">
+            <strong style="display:block; color: var(--earth); margin-bottom: 3px;">🍦 Blue Java</strong>
+            The flavor crown jewel. Container, overwinter in bright space.
+          </div>
+          <div style="background: var(--parchment); border-radius: 8px; padding: 12px 14px; font-size: 13px;">
+            <strong style="display:block; color: var(--ink-mid); margin-bottom: 3px;">🤲 Praying Hands</strong>
+            The conversation piece. Unique fused fruit, vanilla-honey flavor.
+          </div>
+          <div style="background: var(--parchment); border-radius: 8px; padding: 12px 14px; font-size: 13px;">
+            <strong style="display:block; color: var(--ink-mid); margin-bottom: 3px;">👑 Gros Michel</strong>
+            The legend. The most work, the most reward. Sunroom or greenhouse overwinter.
+          </div>
+        </div>
+        <div style="background: linear-gradient(135deg, #EFF6E6, #F5EDE5); border-radius: 8px; padding: 14px 18px; font-size: 14px;">
+          <strong style="display:block; font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--leaf-mid); margin-bottom: 6px;">💡 Pro Tip for the Full Collection</strong>
+          Stagger your purchases — don't buy everything in year one. Start with basjoo + velutina (ground) and Raja Puri (container) in year one. Add Blue Java in year two once you've nailed the overwinter routine. Add Praying Hands + Gros Michel in year three when you have the space and systems dialed in. This approach lets you build skills and infrastructure progressively rather than being overwhelmed.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONLINE BUYING GUIDE -->
+<section id="buyguide">
+  <div class="container">
+    <div class="section-eyebrow">Where to Buy Each Variety</div>
+    <h2>Online Banana Plant Buying Guide</h2>
+    <p>Banana plant quality, accuracy of labeling, and shipping success vary enormously between suppliers. This guide maps each variety to the best online source(s), with notes on what to look for, what to avoid, and how to time your order for the DMV region.</p>
+
+    <div class="callout green">
+      <div class="callout-title">📦 Universal Ordering Tips for the DMV</div>
+      <p><strong>Best ordering window:</strong> Late April through mid-May. Plants shipped during this window arrive when temperatures are warm enough to minimize transit stress. Avoid ordering in March (too cold in transit) or August (heat stress). <strong>Request heat packs</strong> if ordering in April. <strong>Avoid bare-root ordering</strong> for beginners — potted plants establish faster and handle shipping better. Always inspect immediately on arrival and photograph any damage before contacting the seller.</p>
+    </div>
+
+    <h3 style="margin-top: 28px;">Variety-by-Variety Sourcing</h3>
+
+    <!-- Buying table -->
+    <div style="overflow-x: auto; margin-top: 16px;">
+    <table class="ref-table" style="min-width: 680px;">
+      <thead>
+        <tr>
+          <th>Variety</th>
+          <th>Best Online Source(s)</th>
+          <th>URL / Notes</th>
+          <th>Typical Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Musa basjoo</strong></td>
+          <td>Fast Growing Trees · Nature Hills · Easy To Grow Bulbs · Garden Goods Direct</td>
+          <td>fast-growing-trees.com · naturehills.com · easytogrowbulbs.com · gardengoodsdirect.com — Most widely available; check for multi-stem divisions for value</td>
+          <td>$15–$55</td>
+        </tr>
+        <tr>
+          <td><strong>Musa velutina</strong></td>
+          <td>Plant Delights Nursery · One Green World</td>
+          <td>plantdelights.com · onegreenworld.com — Plant Delights is the definitive zone 7b-tested source; sells out fast in spring</td>
+          <td>$12–$30</td>
+        </tr>
+        <tr>
+          <td><strong>Musella lasiocarpa</strong></td>
+          <td>Plant Delights Nursery · Banana Trees For Sale</td>
+          <td>plantdelights.com · bananatreesforsale.com — Rare; Plant Delights typically has it; check availability in Feb/March</td>
+          <td>$18–$45</td>
+        </tr>
+        <tr>
+          <td><strong>Dwarf Orinoco</strong></td>
+          <td>Just Fruits & Exotics · Wellspring Gardens · Etsy (vetted sellers)</td>
+          <td>justfruitsandexotics.com · wellspringgardens.com — JF&E ships in-pot (better); Etsy sellers like "TropicalPlantShop" often have pups</td>
+          <td>$20–$60</td>
+        </tr>
+        <tr>
+          <td><strong>Raja Puri</strong></td>
+          <td>Just Fruits & Exotics · Wellspring Gardens · Ty Ty Nursery</td>
+          <td>justfruitsandexotics.com · wellspringgardens.com · tytyga.com — JF&E ships in-pot on a calendar you choose; highly recommended</td>
+          <td>$25–$65</td>
+        </tr>
+        <tr>
+          <td><strong>Blue Java (Ice Cream)</strong></td>
+          <td>Fast Growing Trees · Urban Tropicals · Just Fruits & Exotics · Planting Tree</td>
+          <td>fast-growing-trees.com · urbantropicals.com · plantingtree.com — Most widely sold variety online; quality varies. Urban Tropicals known for accurate labeling (important — many Namwa plants sold as Blue Java)</td>
+          <td>$20–$70</td>
+        </tr>
+        <tr>
+          <td><strong>Dwarf Cavendish</strong></td>
+          <td>Fast Growing Trees · Nature Hills · Top Tropicals · Logee's</td>
+          <td>fast-growing-trees.com · naturehills.com · toptropicals.com · logees.com — Widely available; Logee's specializes in container tropical plants and is excellent for quality</td>
+          <td>$15–$50</td>
+        </tr>
+        <tr>
+          <td><strong>Dwarf Namwa</strong></td>
+          <td>Wellspring Gardens · Top Tropicals · A Natural Farm</td>
+          <td>wellspringgardens.com · toptropicals.com · anaturalfarm.com — Wellspring is the top recommended source for this variety in the mid-Atlantic</td>
+          <td>$20–$55</td>
+        </tr>
+        <tr>
+          <td><strong>Super Dwarf Cavendish</strong></td>
+          <td>Logee's · Garden Nursery Net · Amazon (tissue culture)</td>
+          <td>logees.com · gardennursery.net — Logee's Greenhouse is the gold standard for indoor tropical plants; excellent for this variety</td>
+          <td>$15–$40</td>
+        </tr>
+        <tr>
+          <td><strong>Truly Tiny</strong></td>
+          <td>Logee's · Etsy specialty sellers</td>
+          <td>logees.com — Logee's consistently carries this variety; Etsy has it occasionally from specialty sellers. Confirm it's the true "Truly Tiny" not a mislabeled Super Dwarf</td>
+          <td>$18–$45</td>
+        </tr>
+        <tr>
+          <td><strong>Praying Hands</strong></td>
+          <td>Going Bananas Nursery (FL) · Top Tropicals · Etsy</td>
+          <td>going-bananas.com · toptropicals.com — Going Bananas (Homestead, FL) is the most reputable source for rare edible varieties with the largest selection; call ahead for availability</td>
+          <td>$25–$75</td>
+        </tr>
+        <tr>
+          <td><strong>Red Dacca</strong></td>
+          <td>Logee's · Just Fruits & Exotics · Top Tropicals</td>
+          <td>logees.com · justfruitsandexotics.com · toptropicals.com — Logee's carries Red Dacca as a container specimen; very well-grown plants</td>
+          <td>$25–$65</td>
+        </tr>
+        <tr>
+          <td><strong>Goldfinger (FHIA-01)</strong></td>
+          <td>Going Bananas Nursery · Top Tropicals · Everglades Farm</td>
+          <td>going-bananas.com · toptropicals.com · everglades.farm — Less common than Cavendish types; Going Bananas is the most reliable source nationally</td>
+          <td>$30–$80</td>
+        </tr>
+        <tr>
+          <td><strong>Gros Michel</strong></td>
+          <td>GrossMichelBanana.net · Sow Exotic · Going Bananas</td>
+          <td>grosmichelbanana.net · sowexotic.com · going-bananas.com — A dedicated Gros Michel site exists (grosmichelbanana.net); Sow Exotic is reputable for rare tropical fruit trees</td>
+          <td>$30–$90</td>
+        </tr>
+        <tr>
+          <td><strong>M. sikkimensis 'Ever Red'</strong></td>
+          <td>Monrovia (via local garden centers) · Sugar Creek Gardens</td>
+          <td>monrovia.com (find a retailer) · sugarcreekgardens.com — This is a new 2025 Monrovia introduction; find it at local upscale garden centers stocking Monrovia brand or order from Sugar Creek. Supply is expanding in 2026</td>
+          <td>$20–$50</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Nursery Profiles: What Makes Each One Worth Using</h3>
+
+    <div class="sourcing-card" style="margin-top: 20px;">
+      <h4>🏆 Going Bananas Nursery — Homestead, FL</h4>
+      <p><strong>goingbananas.com (going-bananas.com)</strong> — The single most comprehensive banana specialty nursery in the United States. Family-owned operation in Homestead, FL with over 100 varieties. They sell containerized plants and corms on-site and ship select varieties. If you want Praying Hands, Goldfinger, or any rare edible variety with guaranteed accurate labeling, this is the source. Call ahead to confirm availability — their inventory is real but limited on specialty varieties.</p>
+      <p><strong>Best for:</strong> Rare and specialty edible varieties, accurate cultivar identification, serious collectors.</p>
+    </div>
+
+    <div class="sourcing-card">
+      <h4>🌱 Just Fruits and Exotics — Crawfordville, FL</h4>
+      <p><strong>justfruitsandexotics.com</strong> — Nationally recognized, family-owned nursery specializing in subtropical and tropical fruiting plants. Their unique selling point: plants ship in the pot they were grown in — no bare-root stress. You choose your ship date via a calendar at checkout. Excellent for Raja Puri, Dwarf Orinoco, and Blue Java. Customer service is genuinely responsive.</p>
+      <p><strong>Best for:</strong> DMV growers who want the most stress-free shipping experience for edible varieties.</p>
+    </div>
+
+    <div class="sourcing-card">
+      <h4>🌿 Plant Delights Nursery — Raleigh, NC</h4>
+      <p><strong>plantdelights.com</strong> — Perhaps the most trusted specialty perennial nursery in the eastern US. Based in zone 7b Raleigh, they trial everything in conditions similar to the DMV. Their banana selection is curated specifically for zone 7 success. The go-to source for Musa velutina, Musella lasiocarpa, Musa basjoo, and the new 'Ever Red' sikkimensis. Sells out quickly — add to the waitlist in January/February for spring availability.</p>
+      <p><strong>Best for:</strong> Cold-hardy ornamental bananas, zone 7-tested selection, highest quality plants.</p>
+    </div>
+
+    <div class="sourcing-card">
+      <h4>🏡 Logee's Greenhouses — Danielson, CT</h4>
+      <p><strong>logees.com</strong> — A 130-year-old greenhouse operation specializing in container tropical plants. Their banana plants are grown specifically for indoor and container culture — perfectly suited to the DMV container + overwinter approach. Exceptional for Super Dwarf Cavendish, Truly Tiny, Red Dacca, and other varieties intended as container specimens. Plants arrive well-grown and acclimated to indoor conditions.</p>
+      <p><strong>Best for:</strong> Indoor and container varieties, highest quality for the price on compact edible types.</p>
+    </div>
+
+    <div class="sourcing-card">
+      <h4>🌊 Wellspring Gardens — Online</h4>
+      <p><strong>wellspringgardens.com</strong> — Boutique online nursery specializing in rare and unusual fruiting plants. Excellent accurate cultivar descriptions, tissue culture stock available (disease-free), and one of the few places consistently stocking Dwarf Namwa (Pisang Awak). Strong reputation in online tropical fruit growing communities.</p>
+      <p><strong>Best for:</strong> Dwarf Namwa, Raja Puri, unusual edible varieties with trustworthy labeling.</p>
+    </div>
+
+    <div class="sourcing-card">
+      <h4>🌐 Etsy — Vetted Specialty Sellers</h4>
+      <p><strong>etsy.com</strong> — A mixed bag, but genuinely excellent for banana pups from hobbyist growers with high review counts. Advantages: often cheaper than commercial nurseries, pups from growers who have successfully grown the variety (sometimes in similar climates), and varieties not carried by mainstream nurseries. Risks: mislabeling is more common; always check seller reviews, photos, and ask where the parent plant has been grown. Search specifically for: "Blue Java banana pup," "Dwarf Namwa live plant," "Raja Puri pup."</p>
+      <p><strong>Best for:</strong> Budget buying, rare varieties, connecting with experienced home growers. Requires more diligence in seller vetting.</p>
+    </div>
+
+    <div class="callout earth">
+      <div class="callout-title">⚠️ Red Flags When Buying Online</div>
+      <p><strong>Watch out for:</strong> (1) Plants listed as "Blue Java" with photos showing small, numerous fingers — likely Namwa. (2) Gros Michel from unknown sellers without provenance. (3) Any seller listing "Truly Tiny" at very low prices with no fruiting photos. (4) Bare-root shipping of large plants in cold months. (5) No return/replacement policy. Always look for sellers who offer at minimum a 30-day live arrival guarantee. Top Tropicals, Logee's, Fast Growing Trees, and Just Fruits all offer reasonable guarantees.</p>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"></div></div>
+
+<footer>
+  <strong>Growing Bananas in the DMV — A Complete Home Grower's Guide</strong><br>
+  Compiled for Mid-Atlantic home gardeners in USDA zones 6b–7b &nbsp;·&nbsp; 15 Varieties Profiled &nbsp;·&nbsp; Strategies for DC, Maryland & Virginia
+</footer>
+
+</body>
+</html>
