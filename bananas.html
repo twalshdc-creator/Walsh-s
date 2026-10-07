@@ -361,15 +361,13 @@
   }
   .difficulty-bar {
     display: flex;
-    gap: 3px;
+    gap: 1px;
     justify-content: flex-end;
+    font-size: 13px;
+    line-height: 1;
   }
-  .diff-dot {
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background: var(--rule);
-  }
-  .diff-dot.filled { background: var(--leaf-mid); }
+  .diff-dot { color: var(--rule); }
+  .diff-dot.filled { color: var(--leaf-mid); }
   .variety-desc { font-size: 15px; line-height: 1.7; }
   .variety-highlight {
     background: linear-gradient(135deg, #EFF6E6, #F5EDE5);
@@ -631,6 +629,14 @@
   .sourcing-card p { font-size: 14px; margin-bottom: 6px; }
   .sourcing-card p:last-child { margin-bottom: 0; }
 
+  .ref-table a, .sourcing-card a {
+    color: var(--leaf-mid);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--leaf-light);
+  }
+  .ref-table a:hover, .sourcing-card a:hover { color: var(--leaf); border-bottom-color: var(--leaf); }
+
   .pest-row {
     display: grid;
     grid-template-columns: 140px 1fr 1fr;
@@ -824,7 +830,7 @@
         <div class="variety-header">
           <div class="variety-header-left">
             <div class="variety-name">Musa basjoo — Japanese Fiber Banana</div>
-            <div class="variety-latin">Musa basjoo · AAB Group</div>
+            <div class="variety-latin">Musa basjoo · Wild Species</div>
           </div>
           <div class="variety-badges">
             <span class="badge badge-outdoor">Outdoor</span>
@@ -837,7 +843,7 @@
             <p class="variety-desc">The undisputed champion of cold-hardy bananas and the first plant most DMV gardeners should consider. Musa basjoo is not grown for its fruit (which is seedy and inedible) but for its extraordinary resilience and explosive ornamental presence. Originally from the Ryukyu Islands of southern Japan, it was used historically for its strong leaf fibers in textile production — hence the "fiber" name. It was introduced to Western horticulture through Kew Gardens in the 19th century.</p>
           </div>
           <div class="variety-img-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Musa_basjoo_in_Jardin_des_Plantes_de_Toulouse.jpg/700px-Musa_basjoo_in_Jardin_des_Plantes_de_Toulouse.jpg" alt="Musa basjoo — Japanese Fiber Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🌿</span><p>Musa basjoo<br>Japanese Fiber Banana</p></div>'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Musa_basjoo_in_Jardin_des_Plantes_de_Toulouse.jpg/640px-Musa_basjoo_in_Jardin_des_Plantes_de_Toulouse.jpg" alt="Musa basjoo — Japanese Fiber Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🌿</span><p>Musa basjoo<br>Japanese Fiber Banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
           </div>
           <div class="variety-specs">
@@ -846,7 +852,7 @@
             <div class="spec-row"><span class="spec-label">Fruit</span><span class="spec-val">Inedible (seedy)</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Ground + mulch</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 1 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Ryukyu Islands, Japan</span></div>
           </div>
@@ -878,7 +884,7 @@
             <p class="variety-desc">A compact, flamboyant ornamental banana native to Assam and the eastern Himalayas. The star of this plant is its unique fruit: small, fuzzy, vivid <strong>pink bananas that split open on their own when ripe</strong>, like tiny party favors, revealing dark seeds. The fruit is technically edible but so full of hard black seeds as to be impractical. Grown for the tropical spectacle it creates in a garden — unusual enough that guests always stop and ask about it.</p>
           </div>
           <div class="variety-img-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Musa_velutina_2.jpg/700px-Musa_velutina_2.jpg" alt="Musa velutina — Pink Velvet Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🌸</span><p>Musa velutina<br>Pink Velvet Banana</p></div>'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Musa_velutina_2.jpg/640px-Musa_velutina_2.jpg" alt="Musa velutina — Pink Velvet Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🌸</span><p>Musa velutina<br>Pink Velvet Banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
           </div>
           <div class="variety-specs">
@@ -887,7 +893,7 @@
             <div class="spec-row"><span class="spec-label">Fruit</span><span class="spec-val">Ornamental / self-splitting</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Ground or container</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 2 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Assam / East Himalayas, India</span></div>
           </div>
@@ -919,7 +925,7 @@
             <p class="variety-desc">Not a true banana (a distinct but related genus), the Golden Lotus Banana is from the high mountain forests of Yunnan, China — growing at elevations up to 8,000 feet. This gives it extraordinary cold tolerance for a banana relative. It's grown almost entirely for its spectacular bloom: a massive, <strong>golden-yellow artichoke-shaped flower</strong> that persists on the plant for up to eight months. This is one of the most unusual and conversation-worthy plants you can grow in a DMV garden.</p>
           </div>
           <div class="variety-img-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Musella_lasiocarpa2.jpg/700px-Musella_lasiocarpa2.jpg" alt="Musella lasiocarpa — Golden Lotus Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🌼</span><p>Musella lasiocarpa<br>Golden Lotus Banana</p></div>'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Musella_lasiocarpa2.jpg/640px-Musella_lasiocarpa2.jpg" alt="Musella lasiocarpa — Golden Lotus Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🌼</span><p>Musella lasiocarpa<br>Golden Lotus Banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
           </div>
           <div class="variety-specs">
@@ -928,7 +934,7 @@
             <div class="spec-row"><span class="spec-label">Fruit</span><span class="spec-val">Tiny, inedible (seeds)</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Ground or container</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 2 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Yunnan Province, China</span></div>
           </div>
@@ -946,7 +952,7 @@
       <div class="variety-card">
         <div class="variety-header">
           <div class="variety-header-left">
-            <div class="variety-name">Dwarf Orinoco — Bluggoe Banana</div>
+            <div class="variety-name">Dwarf Orinoco — Horse Banana</div>
             <div class="variety-latin">Musa × paradisiaca 'Orinoco' · ABB Group</div>
           </div>
           <div class="variety-badges">
@@ -960,7 +966,7 @@
             <p class="variety-desc">If you want a realistic shot at eating bananas you grew yourself in the DMV, Dwarf Orinoco is your primary candidate. Originating from the Orinoco River Valley of Venezuela, this cultivar has been selected for exceptional cold and wind tolerance. <strong>The Philadelphia Orchard Project</strong> is actively trialing it in a high tunnel as one of their two primary cold-hardy banana experiments. The fruit is thick-skinned with a mild, starchy-sweet flavor — excellent for cooking green, and fully sweet when ripened yellow. It bounces back from frost damage faster than almost any other variety.</p>
           </div>
           <div class="variety-img-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Musa_paradisiaca_fruit_-_botanic_garden.jpg/700px-Musa_paradisiaca_fruit_-_botanic_garden.jpg" alt="Dwarf Orinoco Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍌</span><p>Dwarf Orinoco<br>Bluggoe Banana</p></div>'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Musa_paradisiaca_fruit_-_botanic_garden.jpg/640px-Musa_paradisiaca_fruit_-_botanic_garden.jpg" alt="Dwarf Orinoco Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍌</span><p>Dwarf Orinoco<br>Horse Banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
           </div>
           <div class="variety-specs">
@@ -969,7 +975,7 @@
             <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Mild, starchy-sweet</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Ground + mulch or container</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 2 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Orinoco River Valley, Venezuela</span></div>
           </div>
@@ -993,7 +999,7 @@
           <div class="variety-badges">
             <span class="badge badge-both">Both</span>
             <span class="badge badge-edible">Edible</span>
-            <span class="badge badge-cold">Zone 7</span>
+            <span class="badge badge-cold">Zone 7b</span>
           </div>
         </div>
         <div class="variety-body">
@@ -1001,8 +1007,7 @@
             <p class="variety-desc">A beloved dwarf Indian cultivar that has become one of the most recommended edible bananas for zone 7 growing. Originally from Gujarat, India, Raja Puri is prized by home growers worldwide for its combination of compact size (8–10 ft), genuine cold and wind resistance, and outstanding fruit flavor — described as sweet, creamy, and subtly tart. It is also one of the faster-fruiting varieties, potentially flowering in as little as 9 months and producing a harvestable bunch within 18 months of planting under good conditions.</p>
           </div>
           <div class="variety-img-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Banana_2010.jpg/700px-Banana_2010.jpg" alt="Raja Puri Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍌</span><p>Raja Puri<br>Rajapuri Banana — image coming soon<br><small>Replace with photo from justfruitsandexotics.com</small></p></div>'">
-            <div class="variety-img-credit">© Wikimedia Commons · Replace with Raja Puri-specific photo</div>
+            <div class="img-placeholder"><span>🍌</span><p>Raja Puri<br>Photo coming soon</p></div>
           </div>
           <div class="variety-specs">
             <div class="spec-row"><span class="spec-label">Cold Hardiness</span><span class="spec-val">Zone 7–11</span></div>
@@ -1010,7 +1015,7 @@
             <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Sweet, creamy, mildly tart</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container preferred</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 2 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Gujarat, India</span></div>
           </div>
@@ -1042,7 +1047,7 @@
             <p class="variety-desc">This is the variety you've heard about — the "blue banana that tastes like vanilla." The Blue Java is a Southeast Asian hybrid (ABB genome group) that earned its nickname from the distinctly <strong>silver-blue skin of unripe fruits</strong>, which ripens to a pale, matte yellow. The flavor truly is different: custardy, mellow-sweet, and unmistakably vanilla-adjacent. Freeze ripe slices and blend them and you'll understand why it's branded the "Ice Cream Banana." It's also one of the most wind-resistant bananas, historically planted in windbreaks across Hawaii and the Pacific.</p>
           </div>
           <div class="variety-img-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Blue_Java_Banana.jpg/700px-Blue_Java_Banana.jpg" alt="Blue Java — Ice Cream Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍦</span><p>Blue Java<br>Ice Cream Banana</p></div>'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Blue_Java_Banana.jpg/640px-Blue_Java_Banana.jpg" alt="Blue Java — Ice Cream Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍦</span><p>Blue Java<br>Ice Cream Banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
           </div>
           <div class="variety-specs">
@@ -1051,7 +1056,7 @@
             <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Custardy, vanilla-like, creamy</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container (best for DMV)</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 3 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Southeast Asia / Pacific</span></div>
           </div>
@@ -1082,7 +1087,7 @@
             <p class="variety-desc">The banana you already know — this is the fruit sold in virtually every American grocery store. The "Dwarf" in the name refers to the pseudostem height (6–9 ft), not the fruit, which is full-sized. Its origin story involves the Duke of Devonshire's gardener Sir Joseph Paxton, who cultivated specimens sent from China at Chatsworth House in the 1830s. It replaced the Gros Michel after Panama Disease (Race 1) devastated commercial crops in the 1950s–60s. Young plants have distinctive maroon-purple blotches on their leaves.</p>
           </div>
           <div class="variety-img-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Cavendish_Banana_DS.jpg/700px-Cavendish_Banana_DS.jpg" alt="Dwarf Cavendish Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍌</span><p>Dwarf Cavendish<br>The familiar grocery banana</p></div>'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Cavendish_Banana_DS.jpg/640px-Cavendish_Banana_DS.jpg" alt="Dwarf Cavendish Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🍌</span><p>Dwarf Cavendish<br>The familiar grocery banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
           </div>
           <div class="variety-specs">
@@ -1091,7 +1096,7 @@
             <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Classic banana flavor</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container + overwinter</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 3 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">China / Canary Islands</span></div>
           </div>
@@ -1131,7 +1136,7 @@
             <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Sweet-creamy, vanilla-tang, hints of pineapple/mango</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container or in-ground (warm zones)</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 2 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Southeast Asia (Thailand/Indonesia)</span></div>
           </div>
@@ -1170,7 +1175,7 @@
             <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Classic Cavendish banana</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Indoor houseplant</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 3 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Selection of Cavendish group</span></div>
           </div>
@@ -1209,7 +1214,7 @@
             <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Sweet, Cavendish-type</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Houseplant</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 3 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Cavendish subgroup selection</span></div>
           </div>
@@ -1248,7 +1253,7 @@
             <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Mild, vanilla-honey notes</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container + overwinter</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 3 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Southeast Asia</span></div>
           </div>
@@ -1279,7 +1284,7 @@
             <p class="variety-desc">Visually the most dramatic fruiting banana — the pseudostem, leaf undersides, and fruit are all a deep <strong>burgundy-maroon red</strong>. Widely grown across South Asia, East Africa, and the Caribbean, Red Dacca produces plump, sweet bananas with a flavor richer than Cavendish and a distinct <strong>hint of raspberry and strawberry</strong> in the flesh. The fruit ripens to a reddish-orange (not yellow), and the soft, creamy texture makes it prized for fresh eating and smoothies. In late summer when fully colored up, the pseudostem reads almost burgundy from a distance — nothing else in a garden looks like it.</p>
           </div>
           <div class="variety-img-wrap">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Red_banana.jpg/700px-Red_banana.jpg" alt="Red Dacca — Red Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🔴</span><p>Red Dacca<br>Red Banana</p></div>'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Red_banana.jpg/640px-Red_banana.jpg" alt="Red Dacca — Red Banana" onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><span>🔴</span><p>Red Dacca<br>Red Banana</p></div>'">
             <div class="variety-img-credit">© Wikimedia Commons CC-BY-SA</div>
           </div>
           <div class="variety-specs">
@@ -1288,7 +1293,7 @@
             <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Richer than Cavendish, raspberry-sweet notes</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container + overwinter</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 3 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">South Asia / Southeast Asia</span></div>
           </div>
@@ -1327,7 +1332,7 @@
             <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Apple-like, tangy-sweet, no browning when cut</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container + overwinter</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 3 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Honduras (FHIA program)</span></div>
           </div>
@@ -1366,7 +1371,7 @@
             <div class="spec-row"><span class="spec-label">Flavor</span><span class="spec-val">Rich, creamy, complex — what banana candy is based on</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Container + active indoor overwintering</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot filled"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 4 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot filled">★</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Southeast Asia; cultivated Martinique/Jamaica</span></div>
           </div>
@@ -1406,7 +1411,7 @@
             <div class="spec-row"><span class="spec-label">Fruit</span><span class="spec-val">Inedible</span></div>
             <div class="spec-row"><span class="spec-label">Strategy</span><span class="spec-val">Ground + mulch</span></div>
             <div class="spec-row"><span class="spec-label">Ease</span>
-              <span class="spec-val"><div class="difficulty-bar"><div class="diff-dot filled"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div><div class="diff-dot"></div></div></span>
+              <span class="spec-val"><div class="difficulty-bar" aria-label="Ease: 1 out of 5 stars"><span class="diff-dot filled">★</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span><span class="diff-dot">☆</span></div></span>
             </div>
             <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Sikkim / Darjeeling, India/Nepal border</span></div>
           </div>
@@ -1677,7 +1682,7 @@
       </div>
       <div class="fun-fact">
         <span class="fun-fact-icon">🏔️</span>
-        <p><strong>The highest-altitude banana grows at 9,000 feet.</strong> Musa sikkimensis (including the 'Ever Red' cultivar) grows wild in Himalayan mountain forests, making it one of the most cold-adapted plants in the entire Musa genus. Its discovery surprised botanists who assumed bananas were strictly lowland tropical plants.</p>
+        <p><strong>The highest-altitude banana grows at 6,500 feet.</strong> Musa sikkimensis (including the 'Ever Red' cultivar) grows wild in Himalayan mountain forests, making it one of the most cold-adapted plants in the entire Musa genus. Its discovery surprised botanists who assumed bananas were strictly lowland tropical plants.</p>
       </div>
     </div>
   </div>
@@ -1786,7 +1791,7 @@
           <div style="background: var(--parchment); border-radius: 8px; padding: 14px 16px;">
             <div style="font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--earth); margin-bottom: 6px;">Plant 1 — The Anchor</div>
             <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 16px; margin-bottom: 4px;">Raja Puri</div>
-            <div style="font-size: 13px; color: var(--ink-light);">Zone 7-tolerant, compact (8–10 ft in a 30-gal pot), sweet creamy fruit. Fastest realistic path to eating your own banana. Can even try in-ground if you're in DC proper / Southern MD.</div>
+            <div style="font-size: 13px; color: var(--ink-light);">Zone 7–11, compact (8–10 ft in a 30-gal pot), sweet creamy fruit. Fastest realistic path to eating your own banana. Can even try in-ground if you're in DC proper / Southern MD.</div>
           </div>
           <div style="background: var(--parchment); border-radius: 8px; padding: 14px 16px;">
             <div style="font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--earth); margin-bottom: 6px;">Plant 2 — The Flavor Adventure</div>
@@ -1813,7 +1818,7 @@
         </div>
       </div>
       <div style="padding: 22px 24px;">
-        <p style="font-size: 15px; margin-bottom: 18px;">Two compact varieties that can live their entire lives indoors. One is a true micro-banana that will produce fruit in a 15-gallon pot in a bright room. The other is a cold-hardy ornamental that doubles as a dramatic houseplant when basjoo is too large. Perfect for a DMV apartment dweller with a bright south-facing window or a full-spectrum LED grow light setup.</p>
+        <p style="font-size: 15px; margin-bottom: 18px;">Two compact Cavendish-type varieties that can live their entire lives indoors and still produce real, edible fruit. One fits a living room; the other is small enough for a countertop. Perfect for a DMV apartment dweller with a bright south-facing window or a full-spectrum LED grow light setup.</p>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px;">
           <div style="background: var(--parchment); border-radius: 8px; padding: 14px 16px;">
             <div style="font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-light); margin-bottom: 6px;">Plant 1 — The Fruiter</div>
@@ -1910,91 +1915,91 @@
         <tr>
           <td><strong>Musa basjoo</strong></td>
           <td>Fast Growing Trees · Nature Hills · Easy To Grow Bulbs · Garden Goods Direct</td>
-          <td>fast-growing-trees.com · naturehills.com · easytogrowbulbs.com · gardengoodsdirect.com — Most widely available; check for multi-stem divisions for value</td>
+          <td><a href="https://fast-growing-trees.com" target="_blank" rel="noopener">fast-growing-trees.com</a> · <a href="https://naturehills.com" target="_blank" rel="noopener">naturehills.com</a> · <a href="https://easytogrowbulbs.com" target="_blank" rel="noopener">easytogrowbulbs.com</a> · <a href="https://gardengoodsdirect.com" target="_blank" rel="noopener">gardengoodsdirect.com</a> — Most widely available; check for multi-stem divisions for value</td>
           <td>$15–$55</td>
         </tr>
         <tr>
           <td><strong>Musa velutina</strong></td>
           <td>Plant Delights Nursery · One Green World</td>
-          <td>plantdelights.com · onegreenworld.com — Plant Delights is the definitive zone 7b-tested source; sells out fast in spring</td>
+          <td><a href="https://plantdelights.com" target="_blank" rel="noopener">plantdelights.com</a> · <a href="https://onegreenworld.com" target="_blank" rel="noopener">onegreenworld.com</a> — Plant Delights is the definitive zone 7b-tested source; sells out fast in spring</td>
           <td>$12–$30</td>
         </tr>
         <tr>
           <td><strong>Musella lasiocarpa</strong></td>
           <td>Plant Delights Nursery · Banana Trees For Sale</td>
-          <td>plantdelights.com · bananatreesforsale.com — Rare; Plant Delights typically has it; check availability in Feb/March</td>
+          <td><a href="https://plantdelights.com" target="_blank" rel="noopener">plantdelights.com</a> · <a href="https://bananatreesforsale.com" target="_blank" rel="noopener">bananatreesforsale.com</a> — Rare; Plant Delights typically has it; check availability in Feb/March</td>
           <td>$18–$45</td>
         </tr>
         <tr>
           <td><strong>Dwarf Orinoco</strong></td>
           <td>Just Fruits & Exotics · Wellspring Gardens · Etsy (vetted sellers)</td>
-          <td>justfruitsandexotics.com · wellspringgardens.com — JF&E ships in-pot (better); Etsy sellers like "TropicalPlantShop" often have pups</td>
+          <td><a href="https://justfruitsandexotics.com" target="_blank" rel="noopener">justfruitsandexotics.com</a> · <a href="https://wellspringgardens.com" target="_blank" rel="noopener">wellspringgardens.com</a> — JF&E ships in-pot (better); Etsy sellers like "TropicalPlantShop" often have pups</td>
           <td>$20–$60</td>
         </tr>
         <tr>
           <td><strong>Raja Puri</strong></td>
           <td>Just Fruits & Exotics · Wellspring Gardens · Ty Ty Nursery</td>
-          <td>justfruitsandexotics.com · wellspringgardens.com · tytyga.com — JF&E ships in-pot on a calendar you choose; highly recommended</td>
+          <td><a href="https://justfruitsandexotics.com" target="_blank" rel="noopener">justfruitsandexotics.com</a> · <a href="https://wellspringgardens.com" target="_blank" rel="noopener">wellspringgardens.com</a> · <a href="https://tytyga.com" target="_blank" rel="noopener">tytyga.com</a> — JF&E ships in-pot on a calendar you choose; highly recommended</td>
           <td>$25–$65</td>
         </tr>
         <tr>
           <td><strong>Blue Java (Ice Cream)</strong></td>
           <td>Fast Growing Trees · Urban Tropicals · Just Fruits & Exotics · Planting Tree</td>
-          <td>fast-growing-trees.com · urbantropicals.com · plantingtree.com — Most widely sold variety online; quality varies. Urban Tropicals known for accurate labeling (important — many Namwa plants sold as Blue Java)</td>
+          <td><a href="https://fast-growing-trees.com" target="_blank" rel="noopener">fast-growing-trees.com</a> · <a href="https://urbantropicals.com" target="_blank" rel="noopener">urbantropicals.com</a> · <a href="https://plantingtree.com" target="_blank" rel="noopener">plantingtree.com</a> — Most widely sold variety online; quality varies. Urban Tropicals known for accurate labeling (important — many Namwa plants sold as Blue Java)</td>
           <td>$20–$70</td>
         </tr>
         <tr>
           <td><strong>Dwarf Cavendish</strong></td>
           <td>Fast Growing Trees · Nature Hills · Top Tropicals · Logee's</td>
-          <td>fast-growing-trees.com · naturehills.com · toptropicals.com · logees.com — Widely available; Logee's specializes in container tropical plants and is excellent for quality</td>
+          <td><a href="https://fast-growing-trees.com" target="_blank" rel="noopener">fast-growing-trees.com</a> · <a href="https://naturehills.com" target="_blank" rel="noopener">naturehills.com</a> · <a href="https://toptropicals.com" target="_blank" rel="noopener">toptropicals.com</a> · <a href="https://logees.com" target="_blank" rel="noopener">logees.com</a> — Widely available; Logee's specializes in container tropical plants and is excellent for quality</td>
           <td>$15–$50</td>
         </tr>
         <tr>
           <td><strong>Dwarf Namwa</strong></td>
           <td>Wellspring Gardens · Top Tropicals · A Natural Farm</td>
-          <td>wellspringgardens.com · toptropicals.com · anaturalfarm.com — Wellspring is the top recommended source for this variety in the mid-Atlantic</td>
+          <td><a href="https://wellspringgardens.com" target="_blank" rel="noopener">wellspringgardens.com</a> · <a href="https://toptropicals.com" target="_blank" rel="noopener">toptropicals.com</a> · <a href="https://anaturalfarm.com" target="_blank" rel="noopener">anaturalfarm.com</a> — Wellspring is the top recommended source for this variety in the mid-Atlantic</td>
           <td>$20–$55</td>
         </tr>
         <tr>
           <td><strong>Super Dwarf Cavendish</strong></td>
           <td>Logee's · Garden Nursery Net · Amazon (tissue culture)</td>
-          <td>logees.com · gardennursery.net — Logee's Greenhouse is the gold standard for indoor tropical plants; excellent for this variety</td>
+          <td><a href="https://logees.com" target="_blank" rel="noopener">logees.com</a> · <a href="https://gardennursery.net" target="_blank" rel="noopener">gardennursery.net</a> — Logee's Greenhouse is the gold standard for indoor tropical plants; excellent for this variety</td>
           <td>$15–$40</td>
         </tr>
         <tr>
           <td><strong>Truly Tiny</strong></td>
           <td>Logee's · Etsy specialty sellers</td>
-          <td>logees.com — Logee's consistently carries this variety; Etsy has it occasionally from specialty sellers. Confirm it's the true "Truly Tiny" not a mislabeled Super Dwarf</td>
+          <td><a href="https://logees.com" target="_blank" rel="noopener">logees.com</a> — Logee's consistently carries this variety; Etsy has it occasionally from specialty sellers. Confirm it's the true "Truly Tiny" not a mislabeled Super Dwarf</td>
           <td>$18–$45</td>
         </tr>
         <tr>
           <td><strong>Praying Hands</strong></td>
           <td>Going Bananas Nursery (FL) · Top Tropicals · Etsy</td>
-          <td>going-bananas.com · toptropicals.com — Going Bananas (Homestead, FL) is the most reputable source for rare edible varieties with the largest selection; call ahead for availability</td>
+          <td><a href="https://going-bananas.com" target="_blank" rel="noopener">going-bananas.com</a> · <a href="https://toptropicals.com" target="_blank" rel="noopener">toptropicals.com</a> — Going Bananas (Homestead, FL) is the most reputable source for rare edible varieties with the largest selection; call ahead for availability</td>
           <td>$25–$75</td>
         </tr>
         <tr>
           <td><strong>Red Dacca</strong></td>
           <td>Logee's · Just Fruits & Exotics · Top Tropicals</td>
-          <td>logees.com · justfruitsandexotics.com · toptropicals.com — Logee's carries Red Dacca as a container specimen; very well-grown plants</td>
+          <td><a href="https://logees.com" target="_blank" rel="noopener">logees.com</a> · <a href="https://justfruitsandexotics.com" target="_blank" rel="noopener">justfruitsandexotics.com</a> · <a href="https://toptropicals.com" target="_blank" rel="noopener">toptropicals.com</a> — Logee's carries Red Dacca as a container specimen; very well-grown plants</td>
           <td>$25–$65</td>
         </tr>
         <tr>
           <td><strong>Goldfinger (FHIA-01)</strong></td>
           <td>Going Bananas Nursery · Top Tropicals · Everglades Farm</td>
-          <td>going-bananas.com · toptropicals.com · everglades.farm — Less common than Cavendish types; Going Bananas is the most reliable source nationally</td>
+          <td><a href="https://going-bananas.com" target="_blank" rel="noopener">going-bananas.com</a> · <a href="https://toptropicals.com" target="_blank" rel="noopener">toptropicals.com</a> · <a href="https://everglades.farm" target="_blank" rel="noopener">everglades.farm</a> — Less common than Cavendish types; Going Bananas is the most reliable source nationally</td>
           <td>$30–$80</td>
         </tr>
         <tr>
           <td><strong>Gros Michel</strong></td>
-          <td>GrossMichelBanana.net · Sow Exotic · Going Bananas</td>
-          <td>grosmichelbanana.net · sowexotic.com · going-bananas.com — A dedicated Gros Michel site exists (grosmichelbanana.net); Sow Exotic is reputable for rare tropical fruit trees</td>
+          <td>Gros Michel Banana · Sow Exotic · Going Bananas</td>
+          <td><a href="https://grosmichelbanana.net" target="_blank" rel="noopener">grosmichelbanana.net</a> · <a href="https://sowexotic.com" target="_blank" rel="noopener">sowexotic.com</a> · <a href="https://going-bananas.com" target="_blank" rel="noopener">going-bananas.com</a> — A dedicated Gros Michel site exists (<a href="https://grosmichelbanana.net" target="_blank" rel="noopener">grosmichelbanana.net</a>); Sow Exotic is reputable for rare tropical fruit trees</td>
           <td>$30–$90</td>
         </tr>
         <tr>
           <td><strong>M. sikkimensis 'Ever Red'</strong></td>
           <td>Monrovia (via local garden centers) · Sugar Creek Gardens</td>
-          <td>monrovia.com (find a retailer) · sugarcreekgardens.com — This is a new 2025 Monrovia introduction; find it at local upscale garden centers stocking Monrovia brand or order from Sugar Creek. Supply is expanding in 2026</td>
+          <td><a href="https://monrovia.com" target="_blank" rel="noopener">monrovia.com</a> (find a retailer) · <a href="https://sugarcreekgardens.com" target="_blank" rel="noopener">sugarcreekgardens.com</a> — This is a new 2025 Monrovia introduction; find it at local upscale garden centers stocking Monrovia brand or order from Sugar Creek. Supply is expanding in 2026</td>
           <td>$20–$50</td>
         </tr>
       </tbody>
@@ -2005,37 +2010,37 @@
 
     <div class="sourcing-card" style="margin-top: 20px;">
       <h4>🏆 Going Bananas Nursery — Homestead, FL</h4>
-      <p><strong>goingbananas.com (going-bananas.com)</strong> — The single most comprehensive banana specialty nursery in the United States. Family-owned operation in Homestead, FL with over 100 varieties. They sell containerized plants and corms on-site and ship select varieties. If you want Praying Hands, Goldfinger, or any rare edible variety with guaranteed accurate labeling, this is the source. Call ahead to confirm availability — their inventory is real but limited on specialty varieties.</p>
+      <p><strong><a href="https://going-bananas.com" target="_blank" rel="noopener">going-bananas.com</a></strong> — The single most comprehensive banana specialty nursery in the United States. Family-owned operation in Homestead, FL with over 100 varieties. They sell containerized plants and corms on-site and ship select varieties. If you want Praying Hands, Goldfinger, or any rare edible variety with guaranteed accurate labeling, this is the source. Call ahead to confirm availability — their inventory is real but limited on specialty varieties.</p>
       <p><strong>Best for:</strong> Rare and specialty edible varieties, accurate cultivar identification, serious collectors.</p>
     </div>
 
     <div class="sourcing-card">
       <h4>🌱 Just Fruits and Exotics — Crawfordville, FL</h4>
-      <p><strong>justfruitsandexotics.com</strong> — Nationally recognized, family-owned nursery specializing in subtropical and tropical fruiting plants. Their unique selling point: plants ship in the pot they were grown in — no bare-root stress. You choose your ship date via a calendar at checkout. Excellent for Raja Puri, Dwarf Orinoco, and Blue Java. Customer service is genuinely responsive.</p>
+      <p><strong><a href="https://justfruitsandexotics.com" target="_blank" rel="noopener">justfruitsandexotics.com</a></strong> — Nationally recognized, family-owned nursery specializing in subtropical and tropical fruiting plants. Their unique selling point: plants ship in the pot they were grown in — no bare-root stress. You choose your ship date via a calendar at checkout. Excellent for Raja Puri, Dwarf Orinoco, and Blue Java. Customer service is genuinely responsive.</p>
       <p><strong>Best for:</strong> DMV growers who want the most stress-free shipping experience for edible varieties.</p>
     </div>
 
     <div class="sourcing-card">
       <h4>🌿 Plant Delights Nursery — Raleigh, NC</h4>
-      <p><strong>plantdelights.com</strong> — Perhaps the most trusted specialty perennial nursery in the eastern US. Based in zone 7b Raleigh, they trial everything in conditions similar to the DMV. Their banana selection is curated specifically for zone 7 success. The go-to source for Musa velutina, Musella lasiocarpa, Musa basjoo, and the new 'Ever Red' sikkimensis. Sells out quickly — add to the waitlist in January/February for spring availability.</p>
+      <p><strong><a href="https://plantdelights.com" target="_blank" rel="noopener">plantdelights.com</a></strong> — Perhaps the most trusted specialty perennial nursery in the eastern US. Based in zone 7b Raleigh, they trial everything in conditions similar to the DMV. Their banana selection is curated specifically for zone 7 success. The go-to source for Musa velutina, Musella lasiocarpa, Musa basjoo, and the new 'Ever Red' sikkimensis. Sells out quickly — add to the waitlist in January/February for spring availability.</p>
       <p><strong>Best for:</strong> Cold-hardy ornamental bananas, zone 7-tested selection, highest quality plants.</p>
     </div>
 
     <div class="sourcing-card">
       <h4>🏡 Logee's Greenhouses — Danielson, CT</h4>
-      <p><strong>logees.com</strong> — A 130-year-old greenhouse operation specializing in container tropical plants. Their banana plants are grown specifically for indoor and container culture — perfectly suited to the DMV container + overwinter approach. Exceptional for Super Dwarf Cavendish, Truly Tiny, Red Dacca, and other varieties intended as container specimens. Plants arrive well-grown and acclimated to indoor conditions.</p>
+      <p><strong><a href="https://logees.com" target="_blank" rel="noopener">logees.com</a></strong> — A 130-year-old greenhouse operation specializing in container tropical plants. Their banana plants are grown specifically for indoor and container culture — perfectly suited to the DMV container + overwinter approach. Exceptional for Super Dwarf Cavendish, Truly Tiny, Red Dacca, and other varieties intended as container specimens. Plants arrive well-grown and acclimated to indoor conditions.</p>
       <p><strong>Best for:</strong> Indoor and container varieties, highest quality for the price on compact edible types.</p>
     </div>
 
     <div class="sourcing-card">
       <h4>🌊 Wellspring Gardens — Online</h4>
-      <p><strong>wellspringgardens.com</strong> — Boutique online nursery specializing in rare and unusual fruiting plants. Excellent accurate cultivar descriptions, tissue culture stock available (disease-free), and one of the few places consistently stocking Dwarf Namwa (Pisang Awak). Strong reputation in online tropical fruit growing communities.</p>
+      <p><strong><a href="https://wellspringgardens.com" target="_blank" rel="noopener">wellspringgardens.com</a></strong> — Boutique online nursery specializing in rare and unusual fruiting plants. Excellent accurate cultivar descriptions, tissue culture stock available (disease-free), and one of the few places consistently stocking Dwarf Namwa (Pisang Awak). Strong reputation in online tropical fruit growing communities.</p>
       <p><strong>Best for:</strong> Dwarf Namwa, Raja Puri, unusual edible varieties with trustworthy labeling.</p>
     </div>
 
     <div class="sourcing-card">
       <h4>🌐 Etsy — Vetted Specialty Sellers</h4>
-      <p><strong>etsy.com</strong> — A mixed bag, but genuinely excellent for banana pups from hobbyist growers with high review counts. Advantages: often cheaper than commercial nurseries, pups from growers who have successfully grown the variety (sometimes in similar climates), and varieties not carried by mainstream nurseries. Risks: mislabeling is more common; always check seller reviews, photos, and ask where the parent plant has been grown. Search specifically for: "Blue Java banana pup," "Dwarf Namwa live plant," "Raja Puri pup."</p>
+      <p><strong><a href="https://etsy.com" target="_blank" rel="noopener">etsy.com</a></strong> — A mixed bag, but genuinely excellent for banana pups from hobbyist growers with high review counts. Advantages: often cheaper than commercial nurseries, pups from growers who have successfully grown the variety (sometimes in similar climates), and varieties not carried by mainstream nurseries. Risks: mislabeling is more common; always check seller reviews, photos, and ask where the parent plant has been grown. Search specifically for: "Blue Java banana pup," "Dwarf Namwa live plant," "Raja Puri pup."</p>
       <p><strong>Best for:</strong> Budget buying, rare varieties, connecting with experienced home growers. Requires more diligence in seller vetting.</p>
     </div>
 
